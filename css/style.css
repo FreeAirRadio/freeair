@@ -75,3 +75,49 @@ hr {
 input,select { 
 	vertical-align:middle
 }
+
+.clearfix {
+	clear:both
+}
+
+html {
+	background-image: url(images/bg.png);
+}
+
+html, body {
+	height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	font-family: 'Exo 2', sans-serif;
+}
+
+.page {
+	width:75%;
+	height:100%;
+	margin: 105px auto 0;
+	color:#fff;
+}
+
+header {
+	z-index:9998;
+	height:105px;
+}
+
+menu {
+	list-style-type: none;
+}
+
+.b-content {
+    min-height: 100%;
+    margin-bottom: -150px;
+}
+
+.b-menu {
+	display: inline-block;
+}
+
+footer {
+	height:100px;
+	background-color: rgba(245,134,117,.7);
+}
