@@ -13,6 +13,14 @@
   Note: IE6 works fine without this fix.
 */
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 960px;
 }
@@ -23,41 +31,32 @@ body {
 .container_12 {
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
+  width: 75%;
 }
 
 /* `Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
 
-.grid_1,
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6,
-.grid_7,
-.grid_8,
-.grid_9,
-.grid_10,
-.grid_11,
-.grid_12 {
+DIV[class*="grid"] {
   display: inline;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
-.push_1, .pull_1,
-.push_2, .pull_2,
-.push_3, .pull_3,
-.push_4, .pull_4,
-.push_5, .pull_5,
-.push_6, .pull_6,
-.push_7, .pull_7,
-.push_8, .pull_8,
-.push_9, .pull_9,
-.push_10, .pull_10,
-.push_11, .pull_11 {
+DIV[class*="inner"] {
+  display: inline;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+DIV[class*="span"], DIV[class*="modul"] {
+  display: inline;
+  float: left;
+}
+
+DIV[class*="push"], DIV[class*="pull"] {
   position: relative;
 }
 
@@ -75,240 +74,377 @@ body {
 /* `Grid >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-.container_12 .grid_1 {
-  width: 60px;
+ .grid_1, .inner_1 {
+  width: 6.333%;
 }
 
-.container_12 .grid_2 {
-  width: 140px;
+ .grid_2, .inner_2 {
+  width: 12.666%;
 }
 
-.container_12 .grid_3 {
-  width: 220px;
+ .grid_3, .inner_3 {
+  width: 18.999%;
 }
 
-.container_12 .grid_4 {
-  width: 300px;
+ .grid_4, .inner_4 {
+  width: 25.333%;
 }
 
-.container_12 .grid_5 {
-  width: 380px;
+ .grid_5, .inner_5 {
+  width: 31.666%;
 }
 
-.container_12 .grid_6 {
-  width: 460px;
+ .grid_6, .inner_6 {
+  width: 37.999%;
 }
 
-.container_12 .grid_7 {
-  width: 540px;
+ .grid_7, .inner_7 {
+  width: 44.333%;
 }
 
-.container_12 .grid_8 {
-  width: 620px;
+ .grid_8, .inner_8 {
+  width: 50.666%;
 }
 
-.container_12 .grid_9 {
-  width: 700px;
+ .grid_9, .inner_9 {
+  width: 56.999%;
 }
 
-.container_12 .grid_10 {
-  width: 780px;
+ .grid_10, .inner_10 {
+  width: 63.333%;
 }
 
-.container_12 .grid_11 {
-  width: 860px;
+ .grid_11, .inner_11 {
+  width: 69.666%;
 }
 
-.container_12 .grid_12 {
-  width: 940px;
+ .grid_12, .inner_12 {
+  width: 75.999%;
 }
+
+/* `Span >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+ .span_1 {
+  width: 8.333%;
+}
+
+ .span_2 {
+  width: 16.666%;
+}
+
+ .span_3 {
+  width: 24.999%;
+}
+
+ .span_4 {
+  width: 33.333%;
+}
+
+ .span_5 {
+  width: 41.666%;
+}
+
+ .span_6 {
+  width: 49.999%;
+}
+
+ .span_7 {
+  width: 58.333%;
+}
+
+ .span_8 {
+  width: 66.666%;
+}
+
+ .span_9 {
+  width: 74.999%;
+}
+
+ .span_10 {
+  width: 83.333%;
+}
+
+ .span_11 {
+  width: 91.666%;
+}
+
+ .span_12 {
+  width: 99.999%;
+}
+
+
+/* `Modul >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.modul_1 {
+  width: 5%;
+}
+
+.modul_2 {
+  width: 10%;
+}
+
+.modul_3 {
+  width: 15%;
+}
+
+.modul_4 {
+  width: 20%;
+}
+
+.modul_5 {
+  width: 25%;
+}
+
+.modul_6 {
+  width: 30%;
+}
+
+.modul_7 {
+  width: 35%;
+}
+
+.modul_8 {
+  width: 40%;
+}
+
+.modul_9 {
+  width: 45%;
+}
+
+.modul_10 {
+  width: 50%;
+}
+
+.modul_11 {
+  width: 55%;
+}
+
+.modul_12 {
+  width: 60%;
+}
+
+.modul_13 {
+  width: 65%;
+}
+
+.modul_14 {
+  width: 70%;
+}
+
+.modul_15 {
+  width: 75%;
+}
+
+.modul_16 {
+  width: 80%;
+}
+
+.modul_17 {
+  width: 85%;
+}
+
+.modul_18 {
+  width: 90%;
+}
+
+.modul_19 {
+  width: 95%;
+}
+
+.modul_20 {
+  width: 100%;
+}
+
+
 
 /* `Prefix Extra Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-.container_12 .prefix_1 {
-  padding-left: 80px;
+.prefix_1 {
+  padding-left: 8.333%;
 }
 
-.container_12 .prefix_2 {
-  padding-left: 160px;
+.prefix_2 {
+  padding-left: 16.666%;
 }
 
-.container_12 .prefix_3 {
-  padding-left: 240px;
+ .prefix_3 {
+  padding-left: 24.999%;
 }
 
-.container_12 .prefix_4 {
-  padding-left: 320px;
+ .prefix_4 {
+  padding-left: 33.333%;
 }
 
-.container_12 .prefix_5 {
-  padding-left: 400px;
+ .prefix_5 {
+  padding-left: 41.666%;
 }
 
-.container_12 .prefix_6 {
-  padding-left: 480px;
+ .prefix_6 {
+  padding-left: 49.999%;
 }
 
-.container_12 .prefix_7 {
-  padding-left: 560px;
+ .prefix_7 {
+  padding-left: 58.333%;
 }
 
-.container_12 .prefix_8 {
-  padding-left: 640px;
+ .prefix_8 {
+  padding-left: 66.666%;
 }
 
-.container_12 .prefix_9 {
-  padding-left: 720px;
+ .prefix_9 {
+  padding-left: 74.999%;
 }
 
-.container_12 .prefix_10 {
-  padding-left: 800px;
+ .prefix_10 {
+  padding-left: 83.333%;
 }
 
-.container_12 .prefix_11 {
-  padding-left: 880px;
+ .prefix_11 {
+  padding-left: 91.666%;
 }
 
 /* `Suffix Extra Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-.container_12 .suffix_1 {
-  padding-right: 80px;
+ .suffix_1 {
+  padding-right: 8.333%;
 }
 
-.container_12 .suffix_2 {
-  padding-right: 160px;
+ .suffix_2 {
+  padding-right: 16.666%;
 }
 
-.container_12 .suffix_3 {
-  padding-right: 240px;
+ .suffix_3 {
+  padding-right:  24.999%;
 }
 
-.container_12 .suffix_4 {
-  padding-right: 320px;
+ .suffix_4 {
+  padding-right: 33.333%;
 }
 
-.container_12 .suffix_5 {
-  padding-right: 400px;
+ .suffix_5 {
+  padding-right: 41.666%;
 }
 
-.container_12 .suffix_6 {
-  padding-right: 480px;
+ .suffix_6 {
+  padding-right: 49.999%;
 }
 
-.container_12 .suffix_7 {
-  padding-right: 560px;
+ .suffix_7 {
+  padding-right: 58.333%;
 }
 
-.container_12 .suffix_8 {
-  padding-right: 640px;
+ .suffix_8 {
+  padding-right: 66.666%;
 }
 
-.container_12 .suffix_9 {
-  padding-right: 720px;
+ .suffix_9 {
+  padding-right: 74.999%;
 }
 
-.container_12 .suffix_10 {
-  padding-right: 800px;
+ .suffix_10 {
+  padding-right: 83.333%;
 }
 
-.container_12 .suffix_11 {
-  padding-right: 880px;
+ .suffix_11 {
+  padding-right: 91.666%;
 }
 
 /* `Push Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-.container_12 .push_1 {
-  left: 80px;
+ .push_1 {
+  left: 8.333%;
 }
 
-.container_12 .push_2 {
-  left: 160px;
+ .push_2 {
+  left: 16.666%;
 }
 
-.container_12 .push_3 {
-  left: 240px;
+ .push_3 {
+  left:  24.999%;
 }
 
-.container_12 .push_4 {
-  left: 320px;
+ .push_4 {
+  left: 33.333%;
 }
 
-.container_12 .push_5 {
-  left: 400px;
+ .push_5 {
+  left: 41.666%;
 }
 
-.container_12 .push_6 {
-  left: 480px;
+ .push_6 {
+  left: 49.999%;
 }
 
-.container_12 .push_7 {
-  left: 560px;
+ .push_7 {
+  left: 58.333%;
 }
 
-.container_12 .push_8 {
-  left: 640px;
+ .push_8 {
+  left: 66.666%;
 }
 
-.container_12 .push_9 {
-  left: 720px;
+ .push_9 {
+  left: 74.999%;
 }
 
-.container_12 .push_10 {
-  left: 800px;
+ .push_10 {
+  left: 83.333%;
 }
 
-.container_12 .push_11 {
-  left: 880px;
+ .push_11 {
+  left: 91.666%;
 }
 
 /* `Pull Space >> 12 Columns
 ----------------------------------------------------------------------------------------------------*/
 
-.container_12 .pull_1 {
-  left: -80px;
+ .pull_1 {
+  left: -8.333%;
 }
 
-.container_12 .pull_2 {
-  left: -160px;
+ .pull_2 {
+  left: -16.666%;
 }
 
-.container_12 .pull_3 {
-  left: -240px;
+ .pull_3 {
+  left: -24.999%;
 }
 
-.container_12 .pull_4 {
-  left: -320px;
+ .pull_4 {
+  left: -33.333%;
 }
 
-.container_12 .pull_5 {
-  left: -400px;
+ .pull_5 {
+  left: -41.666%;
 }
 
-.container_12 .pull_6 {
-  left: -480px;
+ .pull_6 {
+  left: -49.999%;
 }
 
-.container_12 .pull_7 {
-  left: -560px;
+ .pull_7 {
+  left: -58.333%;
 }
 
-.container_12 .pull_8 {
-  left: -640px;
+ .pull_8 {
+  left: -66.666%;
 }
 
-.container_12 .pull_9 {
-  left: -720px;
+ .pull_9 {
+  left: -74.999%;
 }
 
-.container_12 .pull_10 {
-  left: -800px;
+ .pull_10 {
+  left: -83.333%;
 }
 
-.container_12 .pull_11 {
-  left: -880px;
+ .pull_11 {
+  left: -91.666%;
 }
 
 /* `Clear Floated Elements
@@ -352,6 +488,6 @@ body {
 */
 
 .clearfix,
-.container_12 {
+ {
   zoom: 1;
 }
