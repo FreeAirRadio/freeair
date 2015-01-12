@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  min-width: 960px;
+  min-width: 320px;
 }
 
 /* `Container
@@ -37,7 +37,7 @@ body {
 /* `Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
 
-DIV[class*="grid"] {
+DIV[class*="grid"], DIV[class*="visible"] {
   display: inline;
   float: left;
   margin-left: 1%;
@@ -365,7 +365,7 @@ DIV[class*="push"], DIV[class*="pull"] {
 }
 
  .push_3 {
-  left:  24.999%;
+  left: 24.999%;
 }
 
  .push_4 {
@@ -490,4 +490,150 @@ DIV[class*="push"], DIV[class*="pull"] {
 .clearfix,
  {
   zoom: 1;
+}
+
+/*Media Queries*/
+.visible-lg-4 {
+    display: inline;
+    width: 23%;
+}
+
+.hidden-lg {
+    display:none;
+}
+
+.lg-push_1 {
+  left: 25%;
+}
+
+.lg-push_2 {
+  left: 50%;
+}
+
+.lg-push_3 {
+  left: 75%;
+}
+
+.lg-pull_1 {
+  left: -25%;
+}
+
+.lg-pull_2 {
+  left: -50%;
+}
+
+.lg-pull_3 {
+  left: -75%;
+}
+
+.lg-prefix_1 {
+  padding-left: 25%;
+}
+
+.lg-prefix_2 {
+  padding-left: 50%;
+}
+
+.lg-prefix_3 {
+  padding-left: 75%;
+}
+
+ .lg-suffix_1 {
+  padding-right: 25%;
+}
+
+ .lg-suffix_2 {
+  padding-right: 50%;
+}
+
+ .lg-suffix_3 {
+  padding-right: 75%;
+}
+
+.visible-md-3, .visible-sm-2, .visible-xs-1 {
+  display: none;
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+@media screen and (max-width:1200px){
+  .visible-md-3 {
+    display: inline;
+    width: 31.333%;
+  }
+
+  .hidden-md {
+    display:none;
+  }
+
+  .md-push_1 {
+    left: 33.333%;
+  }
+
+  .md-push_2 {
+    left: 66.666%;
+  }
+
+  .md-pull_1 {
+    left: -33.333%;
+  }
+
+   .md-pull_2 {
+    left: -66.666%;
+  }
+
+  .md-prefix_1 {
+    padding-left: 33.333%;
+  }
+
+  .md-prefix_2 {
+    padding-left: 66.666%;
+  }
+
+   .md-suffix_1 {
+    padding-right: 33.333%;
+  }
+
+   .md-suffix_2 {
+    padding-right: 66.666%;
+  }
+}
+
+@media screen and (max-width:960px){
+  .visible-sm-2 {
+    display: inline;
+    width: 48%;
+  }
+
+  .hidden-sm {
+    display:none;
+  }
+
+  .sm-push_1 {
+    left: 50%;
+  }
+
+  .sm-pull_1 {
+    left: -50%;
+  }
+
+  .sm-prefix_1 {
+    padding-left: 50%;
+  }
+
+   .sm-suffix_1 {
+    padding-right: 50%;
+  }
+}
+
+@media screen and (max-width:768px){
+  .visible-xs-1 {
+    display: inline;
+    width:98%;
+  }
+
+  .hidden-xs {
+    display:none;
+  }
 }
