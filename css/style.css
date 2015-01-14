@@ -346,6 +346,16 @@ footer {
 	}
 }
 
+@media screen and (max-width:480px){
+	.h-portrait {
+		font-size:16px;
+	}
+
+	.b-menu {
+		margin:0 9px;
+	}
+}
+
 @media all and (orientation:portrait) {
 	header {
 		padding-top:15px;
