@@ -10,7 +10,36 @@
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+		<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+<script>
+$(document).ready(function() {
+var menu = document.getElementsByTagName("menu");
+$("menu").hide();
+$('.b-name-menu').click(function(){
+	$(this).next().slideToggle("normal");
+  });
+
+$("#jquery_jplayer_1").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga"
+      });
+
+	$(".b-more").click(function(){
+		$(".b-faces-track").animate({scrollTop: "+=97"});
+	});
+
+	$(".more-arrow").click(function(){
+		$(".b-faces-voting").animate({scrollTop: "+=97"});
+	});
+})
+</script>
+
 
 </head> 
 <body>
@@ -92,7 +121,7 @@
 				<div class="grid_6 visible-xs-1">
 					<span class="b-name-rating">Top Dj's</span>
 					<div class="b-more">
-						<a href="" target="_blank" class="with-icon arrow"> </a>
+						<div class="with-icon arrow"> </div>
 					</div>
 					<section class="b-peoples">
 						<ul class="b-faces-track">
@@ -212,16 +241,30 @@
 						<div class="grid_2 hidden-xs">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="inner_2 b-play"></div>
-						<div class="grid_8">
+						<div class="grid_10">
 							<div class="track">
-								<div class="name-track">Elly Muse - Hurt</div>
-								<div class="sound-track">
-									<a href="" target="_blank"> </a>
-								</div>
-								<div class="timer">
-									<span class="time">-2:01</span>
-									<span class="all-time">4:22</span>
+								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+								<div id="jp_container_1" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title name-track push_2">
+    										Elly Muse - Hurt
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="javascript:;" class="jp-play" tabindex="1">&#61515;</a></li>
+									        	<li><a href="javascript:;" class="jp-pause" tabindex="1">&#61516;</a></li>
+									        </ul>
+        									<div class="jp-progress">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar"></div>
+          										</div>
+        									</div>
+        									<div class="jp-time-holder">
+          										<div class="jp-current-time time"></div>
+          										<div class="all-time">4:22</div>
+        									</div>
+  										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -230,16 +273,7 @@
 						<div class="grid_2 hidden-xs">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="inner_2 b-play"></div>
-						<div class="grid_8">
-							<div class="track">
-								<div class="name-track">Elly Muse - Hurt</div>
-								<div class="sound-track"> </div>
-								<div class="timer">
-									<span class="time">-2:01</span>
-									<span class="all-time">4:22</span>
-								</div>
-							</div>
+						<div class="grid_10">
 						</div>
 					</div>
 				</div>
@@ -249,8 +283,8 @@
 						<div class="b-favorite-here">
 							VOTE FOR YOUR FAVORITE ARTIST HERE
 						</div>
-						<div class="b-more-arrow">
-							<a href="" target="_blank" class="with-icon arrow"> </a>
+						<div class="b-more-arrow more-arrow">
+							<div class="with-icon arrow"> </div>
 						</div>
 						<ul class="b-faces-voting">
 							<li class="person-voting">
@@ -377,7 +411,7 @@
 					<li class="f-menu">FAQ</li>
 					<li class="f-menu">Popular questions</li>
 				</menu>
-				<div class="b-name-menu">SOCIAL NETWORKS</div>
+				<div class="b-name-social">SOCIAL NETWORKS</div>
 				<div class="b-social">
 					<a href="" target="_blank" class="b-icons fb"> </a>
 					<a href="" target="_blank" class="b-icons tw"> </a>

@@ -308,7 +308,7 @@ menu {
     margin-right:-10px;
 }
 
-.b-name-menu {
+.b-name-menu, .b-name-social {
 	font-family: 'Exo 2', sans-serif;
 	font-weight: 700;
 	font-size: 18px;
@@ -381,6 +381,10 @@ footer {
 	background-position:-180px 0px;
 }
 
+.with-icon {
+	cursor:pointer;
+}
+
 .with-icon:before {
 	background:url("images/sprites.png") no-repeat -9999px -9999px; 
 	width:23px; 
@@ -392,15 +396,6 @@ footer {
 
 .arrow:before, a:hover.arrow:before {
 	background-position:-120px -60px;
-}
-
-.b-play:before {
-	background:url("images/sprites.png") no-repeat -9999px -9999px; 
-	width:27px; 
-	height:32px; 
-	background-position:-180px -60px;
-	display:inline-block; 
-	content:"";
 }
 
 .b-music-list {
@@ -526,10 +521,6 @@ footer {
 	font-weight: 400
 }
 
-.sound-track {
-	display: block;
-}
-
 .timer {
 	display:block;
 	font-size:12px;
@@ -539,14 +530,11 @@ footer {
 .time {
 	display:inline-block;
 	text-align: left;
-	width:49%;
+	width:50%;
 }
 
 .all-time {
 	display:inline-block;
-	text-align: right;
-	width:49%;
-	vertical-align:top;
 }
 
 .b-faces-voting {
@@ -598,7 +586,7 @@ footer {
 .time-track {
 	display:inline-block;
 	padding:15px 0 15px 15px;
-	width:35%;
+	width:32%;
 	background-color: rgba(0,0,0,.05);
 	font-weight:600;
 }
@@ -612,7 +600,7 @@ footer {
 .time-next-track {
 	display:inline-block;
 	padding:15px 0 15px 20px;
-	width:35.5%;
+	width:33%;
 	background-color: rgba(0,0,0,.05);
 	font-weight:600;
 }
@@ -761,8 +749,9 @@ footer {
 
 @media screen and (max-width:520px){
 	.b-autor {
-		width:100%;
+		width:90%;
 		height:auto;
+		margin-top:3px;
 	}
 
 	.page {
@@ -783,10 +772,6 @@ footer {
 
 	.angle-coral-r {
 	    border-bottom: 6px solid rgba(137,184,180,.8);
-	}
-
-	menu {
-		display:none;
 	}
 
 	.person-voting {
@@ -849,6 +834,10 @@ footer {
 	.b-favorite-here {
 		width: 100%;
 	}
+
+	.b-name-menu {
+		cursor:pointer;
+	}
 }
 
 @media screen and (max-width:480px){
@@ -886,4 +875,90 @@ footer {
 	footer {
 		background-image: none;
 	}
+}
+
+.jp-gui {
+	position: relative;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f34927', endColorstr='#dd3311',GradientType=0 );
+    border-radius: 3px;
+	overflow: hidden;
+}
+
+.jp-jplayer, .jp-audio {
+    width: 350px;
+}
+
+.jp-controls {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jp-controls li {
+    display: inline;
+}
+
+.jp-controls a {
+    color: #fff;
+}
+
+.jp-play:before {
+	background:url("images/sprites.png") no-repeat -9999px -9999px; 
+	width:27px; 
+	height:32px; 
+	display:inline-block;
+	margin-top: 5px;
+	background-position: -180px -60px;
+	content:"";
+}
+
+.jp-pause:before {
+	background:url("images/sprites.png") no-repeat -9999px -9999px; 
+	width:23px; 
+	height:32px; 
+	display:inline-block;
+	margin-top: 5px;
+	background-position: -120px -180px;
+	content:"";
+}
+
+.jp-volume-bar {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+    width: 45px;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #992E18;
+    overflow: hidden;
+}
+
+.jp-volume-bar-value {
+    background-color: #fff;
+    height: 8px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.jp-progress {
+    background-color: #3b3b3b;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 18px;
+    left: 15%;
+    width: 57%;
+}
+
+.jp-play-bar {
+    height: 6px;
+    background-color: #f58271;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.jp-time-holder {
+    color: #FFF;
+    font-size: 12px;
+    line-height: 14px;
+    position: relative;
+	left:15%;
 }
