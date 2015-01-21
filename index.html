@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
 
-<title>Project</title>
-	<link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,200,300,400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
+	<head>
+		
+		<title>FreeAir Radio</title>
 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,200,300,400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.sticky.js"></script>
 		<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-<script>
-$(document).ready(function() {
-var menu = document.getElementsByTagName("menu");
-$("menu").hide();
-$('.b-name-menu').click(function(){
-	$(this).next().slideToggle("normal");
-  });
+		<script type="text/javascript" src="js/main.js"></script>
 
-$("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga"
-      });
+		<script>
+			$(document).ready(function() {
+				var menu = document.getElementsByTagName("menu");
+				$("menu").hide();
+				$('.b-name-menu').click(function(){
+					$(this).next().slideToggle("normal");
+				});
 
-	$(".b-more").click(function(){
-		$(".b-faces-track").animate({scrollTop: "+=97"});
-	});
+				$("#jquery_jplayer_1").jPlayer({
+					ready: function () {
+						$(this).jPlayer("setMedia", {
+							mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+						});
+					},
+					swfPath: "/js",
+					supplied: "mp3,oga"
+				});
 
-	$(".more-arrow").click(function(){
-		$(".b-faces-voting").animate({scrollTop: "+=97"});
-	});
-})
-</script>
+				$(".b-more").click(function(){
+					$(".b-faces-track").animate({scrollTop: "+=97"});
+				});
 
+				$(".more-arrow").click(function(){
+					$(".b-faces-voting").animate({scrollTop: "+=97"});
+				});
+			})
+		</script>
 
-</head> 
-<body>
+	</head>
 	
-	<div class="page">
-		<header class="inner_12">
-			<div class="grid_2 visible-md-2"><img src="css/images/logo.png" width="120" alt="" class="logo"></div>
-			<div class="visible-md-2 hidden-xl portrait">player</div>
-			<div class="grid_7 prefix_1 hidden-prefix visible-md-1 h-portrait">
-				<nav>
-					<li class="b-menu">News</li>
-					<li class="b-menu">Schedule</li>
-					<li class="b-menu">TOP5</li>
-					<li class="b-menu">DJs</li>
-					<li class="b-menu">Galery</li>
-				</nav>
-			</div>
-			<div class="grid_3 prefix_1 hidden-md">player</div>
-		</header>
-		<div class="l-content">
+	<body>
+	
+		<section class="page" role="document">
+		
+			<header class="inner_12">
+				<div class="grid_2 visible-md-2"><img src="css/images/logo.png" width="120" alt="" class="logo"></div>
+				<div class="visible-md-2 hidden-xl portrait">player</div>
+				<div class="grid_7 prefix_1 hidden-prefix visible-md-1 h-portrait">
+					<nav>
+						<li class="b-menu">News</li>
+						<li class="b-menu">Schedule</li>
+						<li class="b-menu">TOP5</li>
+						<li class="b-menu">DJs</li>
+						<li class="b-menu">Galery</li>
+					</nav>
+				</div>
+				<div class="grid_3 prefix_1 hidden-md">player</div>
+			</header>
+			
+			
+		<section class="l-content" role="main">
+			
 			<div class="span_12">
 				<div class="angle-green-l"></div>
 				<div class="angle-green"></div>
 				<div class="angle-green-r"></div>
 			</div>
+			
 			<div class="grid_12 modul mini b-listen">
 				<div class="grid_3 visible-sm-3">
 					<img src="css/images/photo.png" width="" alt="" class="b-autor">
@@ -80,10 +90,10 @@ $("#jquery_jplayer_1").jPlayer({
 							<a href="" target="_blank" class="star-rating"> </a>
 						</div>
 						<div class="track-player">0</div>
-							<div class="timer">
-								<span class="time">-2:01</span>
-								<span class="all-time">4:22</span>
-							</div>
+						<div class="timer">
+							<span class="time">-2:01</span>
+							<span class="all-time">4:22</span>
+						</div>
 					</div>
 				</div>
 				<div class="grid_5 visible-sm-3-1">
@@ -104,6 +114,7 @@ $("#jquery_jplayer_1").jPlayer({
 					</div>
 				</div>
 			</div>
+			
 			<div class="grid_12 hidden-xs b-popularity">
 				<div class="grid_3">21</div>
 				<div class="grid_4">22</div>
@@ -245,25 +256,25 @@ $("#jquery_jplayer_1").jPlayer({
 							<div class="track">
 								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
 								<div id="jp_container_1" class="jp-audio">
-  									<div class="jp-type-single">
-    									<div class="jp-title name-track push_2">
-    										Elly Muse - Hurt
-    									</div>
-    									<div class="jp-gui jp-interface">
-									        <ul class="jp-controls">
-									        	<li><a href="javascript:;" class="jp-play" tabindex="1">&#61515;</a></li>
-									        	<li><a href="javascript:;" class="jp-pause" tabindex="1">&#61516;</a></li>
-									        </ul>
-        									<div class="jp-progress">
-          										<div class="jp-seek-bar">
-           											<div class="jp-play-bar"></div>
-          										</div>
-        									</div>
-        									<div class="jp-time-holder">
-          										<div class="jp-current-time time"></div>
-          										<div class="all-time">4:22</div>
-        									</div>
-  										</div>
+									<div class="jp-type-single">
+										<div class="jp-title name-track push_2">
+											Elly Muse - Hurt
+										</div>
+										<div class="jp-gui jp-interface">
+											<ul class="jp-controls">
+												<li><a href="javascript:;" class="jp-play" tabindex="1">&#61515;</a></li>
+												<li><a href="javascript:;" class="jp-pause" tabindex="1">&#61516;</a></li>
+											</ul>
+											<div class="jp-progress">
+												<div class="jp-seek-bar">
+													<div class="jp-play-bar"></div>
+												</div>
+											</div>
+											<div class="jp-time-holder">
+												<div class="jp-current-time time"></div>
+												<div class="all-time">4:22</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -344,7 +355,7 @@ $("#jquery_jplayer_1").jPlayer({
 			<div class="inner_12 b-slider">
 				<ul class="b-block-news">
 					<li class="b-news">
-						<div >
+						<div>
 							<div class="b-news-image">
 								<img src="css/images/news.jpg" width="" alt="">
 							</div>
@@ -362,7 +373,7 @@ $("#jquery_jplayer_1").jPlayer({
 						</div>
 					</li>
 					<li class="b-news">
-						<div >
+						<div>
 							<div class="b-news-image">
 								<img src="css/images/news.jpg" width="" alt="">
 							</div>
@@ -373,9 +384,10 @@ $("#jquery_jplayer_1").jPlayer({
 				</ul>
 			</div>
 			<div class="clear"></div>
-		</div>
-		<div class="grid_12 h-footer"> </div>
-		<footer>
+			</section>
+			<div class="grid_12 h-footer"></div>
+
+			<footer>
 			<div class="span_4 push_1 hidden-push visible-md-3 visible-xs-1 visible-xxs-1">
 				<div class="b-name-menu">ABOUT</div>
 				<menu>
@@ -390,42 +402,42 @@ $("#jquery_jplayer_1").jPlayer({
 					<li class="f-menu">Small Business Advertising</li>
 					<li class="f-menu">Advertising Choices</li>
 				</menu>
-			</div>
-			<div class="span_2 visible-md-3 visible-xs-1 visible-xxs-1">
-				<div class="b-name-menu">DIRECTORIES</div>
-				<menu>
-					<li class="f-menu">About FreeAir Radio</li>
-					<li class="f-menu">Celebrity’s life</li>
-					<li class="f-menu">Mobile App</li>
-					<li class="f-menu">TOP40 tracks</li>
-					<li class="f-menu">Site Galery</li>
-					<li class="f-menu">DJs</li>
-					<li class="f-menu">Site Map</li>
-				</menu>
-			</div>
-			<div class="span_3 visible-md-3 visible-xs-1 visible-xxs-1">
-				<div class="b-name-menu">FREEAIR</div>
-				<menu>
-					<li class="f-menu">About FreeAir Radio</li>
-					<li class="f-menu">Vacancies</li>
-					<li class="f-menu">FAQ</li>
-					<li class="f-menu">Popular questions</li>
-				</menu>
-				<div class="b-name-social">SOCIAL NETWORKS</div>
-				<div class="b-social">
-					<a href="" target="_blank" class="b-icons fb"> </a>
-					<a href="" target="_blank" class="b-icons tw"> </a>
-					<a href="" target="_blank" class="b-icons go"> </a>
-					<a href="" target="_blank" class="b-icons yt"> </a>
 				</div>
-			</div>
-			<div class="span_3 hidden-md">
+				<div class="span_2 visible-md-3 visible-xs-1 visible-xxs-1">
+					<div class="b-name-menu">DIRECTORIES</div>
+					<menu>
+						<li class="f-menu">About FreeAir Radio</li>
+						<li class="f-menu">Celebrity’s life</li>
+						<li class="f-menu">Mobile App</li>
+						<li class="f-menu">TOP40 tracks</li>
+						<li class="f-menu">Site Galery</li>
+						<li class="f-menu">DJs</li>
+						<li class="f-menu">Site Map</li>
+					</menu>
+				</div>
+				<div class="span_3 visible-md-3 visible-xs-1 visible-xxs-1">
+					<div class="b-name-menu">FREEAIR</div>
+					<menu>
+						<li class="f-menu">About FreeAir Radio</li>
+						<li class="f-menu">Vacancies</li>
+						<li class="f-menu">FAQ</li>
+						<li class="f-menu">Popular questions</li>
+					</menu>
+					<div class="b-name-social">SOCIAL NETWORKS</div>
+					<div class="b-social">
+						<a href="" target="_blank" class="b-icons fb"> </a>
+						<a href="" target="_blank" class="b-icons tw"> </a>
+						<a href="" target="_blank" class="b-icons go"> </a>
+						<a href="" target="_blank" class="b-icons yt"> </a>
+					</div>
+				</div>
+				<div class="span_3 hidden-md">
 
-			</div>
-			<div class="clear"></div>
-		</footer>
-	</div>
+				</div>
+				<div class="clear"></div>
+			</footer>
+		</section>
 
-</body>
+	</body>
 
 </html>
