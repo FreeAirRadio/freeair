@@ -5,47 +5,13 @@
 
 <title>Project</title>
 	<link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,200,300,400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sticky.js"></script>
 		<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-<script>
-$(document).ready(function() {
-var menu = document.getElementsByTagName("menu");
-$("menu").hide();
-$('.b-name-menu').click(function(){
-	$(this).next().slideToggle("normal");
-  });
-
-$("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga"
-      });
-
-	$(".b-more").click(function(){
-		$(".b-faces-track").animate({scrollTop: "+=97"});
-	});
-
-	$(".more-arrow").click(function(){
-		$(".b-faces-voting").animate({scrollTop: "+=97"});
-	});
-
-	$(".person-voting").hover(function(){
-	    $(".total").css("background","none");
-	    }, function(){
-	    $(".total").css("background-color"," #f58271");
-  	});
-})
-</script>
-
 
 </head> 
 <body>
@@ -319,7 +285,7 @@ $("#jquery_jplayer_1").jPlayer({
 			</div>
 			<div class="span_12 b-voting">
 				<div class="grid_6 modul mini">
-					<div class="b-shadow h-padding-t h-padding-b b-music-name">TOP 5 Traks</div>
+					<div class="b-shadow h-padding-t h-padding-b b-music-name">TOP 5 Tracks</div>
 					<div class="grid_12 b-music-list">
 						<div class="grid_2 hidden-xs">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
