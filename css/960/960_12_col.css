@@ -587,6 +587,16 @@ DIV[class*="visible"] {
 }
 
 @media screen and (max-width:520px){
+  .visible-xs-3-1 {
+    display: inline;
+    width:31.333%;
+  }
+
+  .visible-xs-3-2 {
+    display: inline;
+    width:64.666%;
+  }
+
   .visible-xs-2 {
     display: inline;
     width:48%;

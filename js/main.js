@@ -39,7 +39,7 @@ $("#jquery_jplayer_1").jPlayer({
 
 function bMore(){
 	$(".b-more").click(function(){
-		$(".b-faces-track").animate({scrollTop: "+=97"});
+		$(".b-dj-ul").animate({scrollTop: "+=97"});
 	});
 }
 
