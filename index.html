@@ -19,23 +19,23 @@
 	<div class="page">
 		<header class="inner_12">
 			<div class="grid_2 visible-md-2"><img src="css/images/logo.png" width="120" alt="" class="logo"></div>
-			<div class="visible-md-2 hidden-xl portrait">player</div>
+			<div class="visible-md-2 hidden-xl">player</div>
 			<div class="grid_7 prefix_1 hidden-prefix visible-md-1">
 				<nav>
-					<li class="item-menu h-menu">
-						<a href="" target="_blank">News</a>
+					<li class="h-menu">
+						<h4><a href="" target="_blank" class="regular font-gray">News</a></h4>
 					</li>
-					<li class="item-menu h-menu">
-						<a href="" target="_blank">Schedule</a>
+					<li class="h-menu">
+						<h4><a href="" target="_blank" class="regular font-gray">Schedule</a></h4>
 					</li>
-					<li class="item-menu h-menu">
-						<a href="" target="_blank">TOP5</a>
+					<li class="h-menu">
+						<a href="" target="_blank" class="regular font-gray">TOP5</a>
 					</li>
-					<li class="item-menu h-menu">
-						<a href="" target="_blank">DJs</a>
+					<li class="h-menu">
+						<a href="" target="_blank" class="regular font-gray">DJs</a>
 					</li>
-					<li class="item-menu h-menu">
-						<a href="" target="_blank">Galery</a>
+					<li class="h-menu">
+						<a href="" target="_blank" class="regular font-gray">Galery</a>
 					</li>
 				</nav>
 			</div>
@@ -47,25 +47,37 @@
 				<div class="angle-green"></div>
 				<div class="angle-green-r"></div>
 			</div>
-			<div class="grid_12 modul mini l-player">
-				<div class="grid_3 visible-sm-3">
+			<div class="grid_12 modul  l-player">
+				<div class="grid_3 visible-sm-3 h-padding-t2">
 					<img src="css/images/photo.png" width="" alt="" class="photo-author">
 				</div>
-				<div class="grid_4 visible-sm-3-2">
+				<div class="grid_4 visible-sm-3-2 h-padding-t2">
 					<div class="b-player">
-						<div class="start-player">
-							<a href="" target="_blank" class="play-pause"> </a>
-							<div class="player-track-name">
-								<span class="autor-track">Christopher Stewart</span><br/>
-								<span class="name-track">The road to space</span>
+						<div id="jquery_jplayer_2" class="jp-jplayer"></div>
+						<div id="jp_container_1" class="jp-audio">
+  							<div class="jp-type-single">
+  								<ul class="jp-controls b-controls">
+									<li><a href="" class="jp-play item-play" tabindex="1"> </a></li>
+									<li><a href="" class="jp-pause item-pause" tabindex="1"> </a></li>
+								</ul>
+    							<div class="jp-title player-track-name">
+									<span class="autor-track">Christopher Stewart</span><br/>
+									<span class="name-track">The road to space</span>
+    							</div>
+    							<a href="" target="_blank" class="star-rating"> </a>
+    							<div class="jp-gui jp-interface">
+        							<div class="jp-progress b-progress">
+          								<div class="jp-seek-bar">
+           									<div class="jp-play-bar b-play-bar"></div>
+          								</div>
+        							</div>
+        							<div class="jp-time-holder b-time-holder">
+          								<div class="jp-current-time item-time"></div>
+          								<div class="all-time">4:22</div>
+        							</div>
+  								</div>
 							</div>
-							<a href="" target="_blank" class="star-rating"> </a>
 						</div>
-						<div class="track-player">0</div>
-							<div class="timer">
-								<span class="time">-2:01</span>
-								<span class="all-time">4:22</span>
-							</div>
 					</div>
 				</div>
 				<div class="grid_5 visible-sm-3-1">
@@ -97,23 +109,14 @@
 				<div class="angle-coral-r"></div>
 			</div>
 			<div class="inner_12 l-top h-padding-t h-padding-b">
-				<div class="grid_6 visible-xs-1">
-					<div class="b-name-top-now">
-						top <span class="font-weight">40</span> tracks
-					</div>
-					<div class="now-on">
-						now on
-					</div>
-					<div class="radio-frequency">
-						99.9 fm
-					</div>
-					<img src="css/images/bgfm.png" width="" alt="" class="under">
+				<div class="grid_6 visible-xs-1 h-margin-t h-margin-b">
+					<img src="css/images/bgfm.png" width="" alt="" class="item-banner">
 				</div>
 				<div class="grid_6 visible-xs-1">
 					<span class="b-name-rating">Top Dj's</span>
 					<section class="b-dj-top">
-						<ul class="b-dj-ul">
-							<li class="item-dj">
+						<ul class="b-dj-ul h-margin-t">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -121,7 +124,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -129,7 +132,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -137,7 +140,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -145,7 +148,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -153,7 +156,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -161,7 +164,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -169,7 +172,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -177,7 +180,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -185,7 +188,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -193,7 +196,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -201,7 +204,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -209,7 +212,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -217,7 +220,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -225,7 +228,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -233,7 +236,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -241,7 +244,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -249,7 +252,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -257,7 +260,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -265,7 +268,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -273,7 +276,7 @@
 									</figure>
 								</a>
 							</li>
-							<li class="item-dj">
+							<li class="item-photo-person ">
 								<a href="" class="dj-a" >
 									<figure>
 										<img src="css/images/faces/1.jpg" />
@@ -294,14 +297,14 @@
 				<div class="angle-gray-r"></div>
 			</div>
 			<div class="span_12 l-voting">
-				<div class="grid_6 modul mini">
+				<div class="grid_6 modul ">
 					<div class="b-shadow h-padding-t h-padding-b b-name">TOP 5 Tracks</div>
 					<div class="grid_12 b-without-bg">
-						<div class="grid_2 hidden-xs">
+						<div class="grid_2 hidden-xs h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10">
-							<div class="track">
+							<div class="item-track inner_12">
 								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
 								<div id="jp_container_1" class="jp-audio">
   									<div class="jp-type-single">
@@ -329,116 +332,270 @@
 						</div>
 					</div>
 					<div class="grid_12 b-without-bg">
-						<div class="grid_2 hidden-xs">
+						<div class="grid_2 hidden-xs h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10">
+							<div class="item-track inner_12">
+								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+								<div id="jp_container_1" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title name-track push_2">
+    										Elly Muse - Hurt
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="" class="jp-pause" tabindex="1"> </a></li>
+									        </ul>
+        									<div class="jp-progress">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar"></div>
+          										</div>
+        									</div>
+        									<div class="jp-time-holder">
+          										<div class="jp-current-time time"></div>
+          										<div class="all-time">4:22</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_12 b-without-bg">
+						<div class="grid_2 hidden-xs h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10">
+							<div class="item-track inner_12">
+								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+								<div id="jp_container_1" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title name-track push_2">
+    										Elly Muse - Hurt
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="" class="jp-pause" tabindex="1"> </a></li>
+									        </ul>
+        									<div class="jp-progress">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar"></div>
+          										</div>
+        									</div>
+        									<div class="jp-time-holder">
+          										<div class="jp-current-time time"></div>
+          										<div class="all-time">4:22</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_12 b-without-bg">
+						<div class="grid_2 hidden-xs h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10">
+							<div class="item-track inner_12">
+								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+								<div id="jp_container_1" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title name-track push_2">
+    										Elly Muse - Hurt
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="" class="jp-pause" tabindex="1"> </a></li>
+									        </ul>
+        									<div class="jp-progress">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar"></div>
+          										</div>
+        									</div>
+        									<div class="jp-time-holder">
+          										<div class="jp-current-time time"></div>
+          										<div class="all-time">4:22</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_12 b-without-bg">
+						<div class="grid_2 hidden-xs h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10">
+							<div class="item-track inner_12">
+								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+								<div id="jp_container_1" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title name-track push_2">
+    										Elly Muse - Hurt
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="" class="jp-pause" tabindex="1"> </a></li>
+									        </ul>
+        									<div class="jp-progress">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar"></div>
+          										</div>
+        									</div>
+        									<div class="jp-time-holder">
+          										<div class="jp-current-time time"></div>
+          										<div class="all-time">4:22</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="grid_6 modul mini">
+				<div class="grid_6 modul ">
 					<div class="b-shadow h-padding-t h-padding-b b-name">Voting</div>
 					<section class="l-voting">
 						<div class="b-favorite-here star-rating">
 							VOTE FOR YOUR FAVORITE ARTIST HERE
 						</div>
 						<ul class="b-faces-voting">
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>
-							<li class="person-voting">
+							<li class="item-photo-person maximum">
 								<figure>
 									<div class="total">2011</div>
-									<a href="" >
+									<a href="" class="singer">
 										<img src="css/images/favorite/1.jpg" />
 									</a>
 									<figcaption>
-										<div class="vote">vote</div>
+										<div class="star-rating vote">vote</div>
+									</figcaption>	
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<div class="total">2011</div>
+									<a href="" class="singer">
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<div class="star-rating vote">vote</div>
+									</figcaption>	
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<div class="total">2011</div>
+									<a href="" class="singer">
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<div class="star-rating vote">vote</div>
+									</figcaption>	
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<div class="total">2011</div>
+									<a href="" class="singer">
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<div class="star-rating vote">vote</div>
 									</figcaption>	
 								</figure>
 							</li>

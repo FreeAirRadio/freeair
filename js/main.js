@@ -3,7 +3,8 @@ $(document).ready(function(){
 
   menuFooter();
 
-  myPlayers();
+  myPlayers1();
+  myPlayers2();
 
   bMore();
 
@@ -19,17 +20,33 @@ function stickyHeader(){
 
 function menuFooter(){
 var menu = document.getElementsByTagName("menu");
-$("menu").hide();
-$('.b-name-menu').click(function(){
-	$(this).next().slideToggle("normal");
-  });
+   if (document.body.clientWidth <= 520){
+    	$("menu").hide();
+      	$('.b-name-menu').click(function(){
+			$(this).next().slideToggle("normal");
+		});
+    } else {
+      $("menu").show();
+    }
 }
 
-function myPlayers(){
+function myPlayers1(){
 $("#jquery_jplayer_1").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
             mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga"
+      });
+}
+
+function myPlayers2(){
+$("#jquery_jplayer_2").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/Bi2-Serebro.mp3"
           });
         },
         swfPath: "/js",
