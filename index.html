@@ -7,12 +7,74 @@
 	<link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,200,300,400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-
+	<script type="text/javascript" src="js/mootools-1.2.4-core.js"></script>
+	<script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sticky.js"></script>
 	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-
+	<script src="js/Scrollbar.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+window.addEvent('domready', function(){
+	var myProducts = new ScrollBar('b-news', 'bar', 'knob', {
+		scroll: {
+			duration: 2000,
+			transition: 'elastic:out',
+			onStart: function(){
+			//	console.log('start ' + this.to[0]);
+			},
+			onComplete: function(){
+			//	console.log('complete ' + this.to[0]);
+			}
+		},
+		slider: {
+			offset: -1,
+			onChange: function(pos){
+			//	console.log('change ' + pos);
+			},
+			onComplete: function(pos){
+			//	console.log('complete ' + pos);
+			}
+		},
+		knob: {
+			duration: 1200,
+			transition: 'elastic:out',
+			onStart: function(){
+			//	console.log('start ' + this.to[0].value); // knob position
+			}
+		}
+	});
+	
+	myProducts.set(1);
+	
+	document.id('move0').addEvent('click', function(){ myProducts.set(0); });
+	document.id('move10').addEvent('click', function(){ myProducts.set(10); });
+	document.id('move100').addEvent('click', function(){ myProducts.set(100); });
+	document.id('move1000').addEvent('click', function(){ myProducts.set(1000); });
+	
+	var products = $$('#products li');
+	document.id('move1st').addEvent('click', function(){ myProducts.set(products[0]); });
+	document.id('move2nd').addEvent('click', function(){ myProducts.set(products[1]); });
+	document.id('move3rd').addEvent('click', function(){ myProducts.set(products[2]); });
+	
+	
+	/*document.id('getPos').addEvent('click', function(){
+		console.log(myProducts.steps);
+	});*/
+	
+	
+	// if your link is on the slider
+	document.id('theSixth').addEvents({
+		'mousedown': function(event){
+			event.stop();
+		},
+		'click': function(){
+			myProducts.set(products[5]);
+		}
+	});
+	
+});
+</script>
 </head> 
 <body>
 	
@@ -39,7 +101,21 @@
 					</li>
 				</nav>
 			</div>
-			<div class="grid_3 prefix_1 hidden-md">player</div>
+			<div class="grid_3 prefix_1 hidden-md">
+				<div class="jp-jplayer"></div>
+					<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+						<div class="jp-type-single">
+							<div class="jp-gui jp-interface">
+								<div class="jp-volume-controls">
+									<div class="jp-mute" tabindex="0"> </div>
+									<div class="jp-volume-bar">
+										<div class="jp-volume-bar-value"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
 		</header>
 		<div class="l-content">
 			<div class="span_12">
@@ -599,6 +675,17 @@
 									</figcaption>	
 								</figure>
 							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<div class="total">2011</div>
+									<a href="" class="singer">
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<div class="star-rating vote">vote</div>
+									</figcaption>	
+								</figure>
+							</li>
 						</ul>
 					</section>
 					<div class="b-more-arrow more-arrow">
@@ -612,44 +699,89 @@
 				<div class="angle angle-r angle-white"></div>
 			</div>
 			<div class="inner_12 bg-white h-padding-t2 h-padding-b2">
-				<ul class="h-margin-l h-margin-r">
-					<li class="visible-xl-3 visible-xs-1">
+				<div id="b-news">
+					<ul class="h-margin-l h-margin-r">
+						<li class="item-news visible-xs-1">
 							<div class="visible-xs-3-1">
 								<img src="css/images/news.jpg" width="" alt="">
 							</div>
 							<div class="visible-xs-3-2">
-							<p>
-								<a href="" class="bold font-coral" target="_blank">
-									He's still trying to win her back
-								</a>
-							</p>
-							<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small></div>
-					</li>
-					<li class="visible-xl-3 visible-xs-1">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
 							<div class="visible-xs-3-1">
 								<img src="css/images/news.jpg" width="" alt="">
 							</div>
 							<div class="visible-xs-3-2">
-							<p>
-								<a href="" class="bold font-coral" target="_blank">
-									He's still trying to win her back
-								</a>
-							</p>
-							<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small></div>
-					</li>
-					<li class="visible-xl-3 visible-xs-1">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
 							<div class="visible-xs-3-1">
 								<img src="css/images/news.jpg" width="" alt="">
 							</div>
 							<div class="visible-xs-3-2">
-							<p>
-								<a href="" class="bold font-coral" target="_blank">
-									He's still trying to win her back
-								</a>
-							</p>
-							<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small></div>
-					</li>
-				</ul>
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="bar"><div id="knob"></div> </div>
 			</div>
 			<div class="clear"></div>
 		</div>

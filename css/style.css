@@ -464,19 +464,22 @@ menu {
 	content:"";
 }
 
+.jp-mute {
+	display: inline-block;
+}
+
 .jp-volume-bar {
-    position: absolute;
-    right: 10px;
-    top: 17px;
-    width: 45px;
+	display:inline-block;
+	margin:0 5px 3px 0;
+    width: 80px;
     height: 8px;
     border-radius: 20px 20px 20px 20px;
-    background-color: #992E18;
+    background-color: #b6cecc;
     overflow: hidden;
 }
 
 .jp-volume-bar-value {
-    background-color: #fff;
+    background-color: #618380;
     height: 8px;
     border-radius: 20px 20px 20px 20px;
 }
@@ -507,6 +510,16 @@ menu {
 	left:0;
 	margin-top:15px;
 	background-color: #618380;
+}
+
+.jp-mute:before {
+	background:url("images/sprites.png") no-repeat -9999px -9999px; 
+	width:18px; 
+	height:15px; 
+	display:inline-block;
+	margin-top: 5px;
+	background-position: -60px -240px;
+	content:"";
 }
 
 .b-time-holder {
@@ -593,25 +606,27 @@ menu {
 	display: block;
 }
 
-figure .singer {
+figure {
 	width: 100%;
+	height:auto;
 	position: relative;
 	vertical-align: top;
-	margin-top: -28px;
 }
 
 figure figcaption {
-	display: none;
+	width: 100%;
+	height:100%;
+	position: absolute;
+	vertical-align: top;
+	top:0;
+	left:0;
+	opacity:0;
+	display: block;
+	background-color: rgba(245,130,113,.8);
 }
 
 figure:hover figcaption {
-	display: block;
-	background-color: rgba(245,130,113,.8);
-	width: 100%;
-	margin-top:-147px;
-	height:147px;
-	position: relative;
-	color: #fff;
+opacity:1;
 }
 
 .total {
@@ -720,6 +735,43 @@ ul {
 
 .maximum {
 	width:24.5%;
+}
+
+#b-news {
+	position: relative;
+	height: auto;
+	width: 100%;
+	overflow: hidden;
+	padding:0 0 30px;
+}
+
+#b-news ul {
+	width: 2000px;
+	height: auto;
+}
+
+#bar {
+	top: 0;
+	left: 7%;
+	width: 86%;
+	height: 1px;
+	position: relative;
+	background-color: #c4c4c4;
+}
+
+#knob {
+	background:url("images/sprites.png") no-repeat -9999px -9999px; 
+	width:43px; 
+	height:44px; 
+	display:inline-block;
+	margin: -10px 0px 0 3px;
+	background-position: 0px -240px;
+	content:"";
+}
+
+.item-news {
+	width:13%;
+	display:inline-block;
 }
 
 @media screen and (max-width:1240px){
