@@ -5,6 +5,10 @@ $(document).ready(function(){
 
   myPlayers1();
   myPlayers2();
+  myPlayers3();
+  myPlayers4();
+  myPlayers5();
+  myPlayers6();
 
   bMore();
 
@@ -34,11 +38,12 @@ function myPlayers1(){
 $("#jquery_jplayer_1").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+            mp3: "audio/Bi2-Serebro.mp3"
           });
         },
         swfPath: "/js",
-        supplied: "mp3,oga"
+        supplied: "mp3,oga",
+        cssSelectorAncestor: "#jp_container_1"
       });
 }
 
@@ -46,11 +51,64 @@ function myPlayers2(){
 $("#jquery_jplayer_2").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
+            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga",
+        cssSelectorAncestor: "#jp_container_2"
+      });
+}
+
+function myPlayers3(){
+$("#jquery_jplayer_3").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
             mp3: "audio/Bi2-Serebro.mp3"
           });
         },
         swfPath: "/js",
-        supplied: "mp3,oga"
+        supplied: "mp3,oga",
+        cssSelectorAncestor: "#jp_container_3"
+      });
+}
+
+function myPlayers4(){
+$("#jquery_jplayer_4").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga",
+        cssSelectorAncestor: "#jp_container_4"
+      });
+}
+
+function myPlayers5(){
+$("#jquery_jplayer_5").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/Bi2-Serebro.mp3"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga",
+        cssSelectorAncestor: "#jp_container_5"
+      });
+}
+
+function myPlayers6(){
+$("#jquery_jplayer_6").jPlayer({
+        ready: function () {
+          $(this).jPlayer("setMedia", {
+            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+          });
+        },
+        swfPath: "/js",
+        supplied: "mp3,oga",
+        cssSelectorAncestor: "#jp_container_6"
       });
 }
 

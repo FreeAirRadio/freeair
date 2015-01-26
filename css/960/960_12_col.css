@@ -407,10 +407,21 @@ DIV[class*="push"], DIV[class*="pull"] {
 }
 
 /*Media Queries*/
+DIV[class*="visible"] {
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+}
 
 .visible-xl-4 {
   display: inline;
   width: 23%;
+}
+
+.visible-xl-3 {
+  display: inline;
+  width: 31%;
+  float:left;
 }
 
 .hidden-xl {
@@ -463,12 +474,6 @@ DIV[class*="push"], DIV[class*="pull"] {
 
  .xl-suffix_3 {
   padding-right: 75%;
-}
-
-DIV[class*="visible"] {
-  float: left;
-  margin-left: 1%;
-  margin-right: 1%;
 }
 
 @media screen and (max-width:1200px){
