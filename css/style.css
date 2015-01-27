@@ -106,24 +106,31 @@ html, body {
 
 h1 {
 	font-size:2.8em;
+	line-height:1.2em;
 }
 
 h2 {
-	font-size:1.8em;
-}
-
-h3 {
 	font-size:1.2em;
 }
 
-h4 {
+h3 {
 	font-size:1em;
 	line-height:18px;
 }
 
-h5,h6 {
+h4 {
 	font-size:0.9em;
 	line-height:18px;
+}
+
+h5 {
+	font-size:0.9em;
+	line-height:14px;
+}
+
+h6 {
+	font-size:0.8em;
+	line-height:14px;
 }
 
 p {
@@ -172,8 +179,12 @@ small {
 	color:#575757;
 }
 
-.font-black {
+.font-taupe {
 	color:#363636;
+}
+
+.font-black {
+	color:#000;
 }
 
 .uppercase {
@@ -197,8 +208,6 @@ img {
 header {
 	z-index:9998;
 	height:104px;
-	background-color: #fff;
-	color:#000;
 	padding-top:40px;
 }
 
@@ -409,15 +418,6 @@ menu {
 	text-indent: 5%;
 }
 
-.b-player {
-	padding-top:10px;
-}
-
-.autor-track {
-	font-size: 12px;
-	color:#718584;
-}
-
 .star-rating:before {
 	background:url("images/sprites.png") no-repeat -9999px -9999px; 
 	width:34px; 
@@ -498,8 +498,6 @@ menu {
 }
 
 .jp-time-holder {
-    font-size: 12px;
-    line-height: 14px;
     position: relative;
 	padding-left:15%;
 }
@@ -526,6 +524,16 @@ menu {
 	padding-left:0;
 }
 
+.name-track:after {
+	background:url("images/sprites.png") no-repeat -9999px -9999px; 
+	width:15px; 
+	height:14px; 
+	display:inline-block;
+	margin:0 0 -2px 3px;
+	background-position: -60px -180px;
+	content:"";
+}
+
 .item-banner {
 	display:block;
 }
@@ -533,7 +541,6 @@ menu {
 /*Styles for DJ*/
 .b-dj-ul {
 	overflow: hidden;
-	height: 268px;
 }
 
 .item-photo-person {
@@ -572,10 +579,7 @@ menu {
 	margin-top:-33px;
 	height:33px;
 	position: relative;
-	color: #fff;
-	font-size:14px;
 	padding:3px 10px 0;
-	font-weight:600;
 }
 
 /*Styles for Singer*/
@@ -585,25 +589,15 @@ menu {
 	border:5px solid #a9d5cd;
 }
 
-.b-favorite-here {
+.b-title-favorite {
 	background-color: #65beb7;
-	color:#fff;
-	font-size: 16px;
-	font-weight: 500;
 	text-align:center;
 	padding:20px;
-	width:100%;
 	vertical-align: top;
-	margin-top:25px;
 }
 
 .b-faces-voting {
 	overflow: hidden;
-	height: 405px;
-}
-
-.singer {
-	display: block;
 }
 
 figure {
@@ -618,6 +612,7 @@ figure figcaption {
 	height:100%;
 	position: absolute;
 	vertical-align: top;
+	text-align:center;
 	top:0;
 	left:0;
 	opacity:0;
@@ -626,24 +621,16 @@ figure figcaption {
 }
 
 figure:hover figcaption {
-opacity:1;
+	opacity:1;
 }
 
 .total {
 	padding: 5px 7px;
 	float: right;
-	margin-right: 7px;
-	top: 35px;
-	position: relative;
+	top:0;
+	right:0;
+	position: absolute;
 	z-index: 25;
-}
-
-.vote {
-	padding:60px 10px 0 0;
-	text-transform: uppercase;
-	font-size: 1em;
-	margin:0 0 0 50px;
-	font-weight: 600;
 }
 
 /*Styles for more*/
@@ -677,10 +664,6 @@ opacity:1;
 	text-align:center;
 }
 
-.bg-without {
-	margin: 15px 0;
-}
-
 /*Styles for news*/
 
 ul {
@@ -701,12 +684,8 @@ ul {
 	padding-top:3%;
 }
 
-.h-padding-b {
-	padding-bottom: 1%;
-}
-
-.h-padding-b2 {
-	padding-bottom: 3%;
+.h-padding-tb2 {
+	padding: 3% 0;
 }
 
 .h-padding {
@@ -721,16 +700,16 @@ ul {
 	margin-top:1%;
 }
 
-.h-margin-b {
-	margin-bottom:1%;
+.h-margin-t2 {
+	margin-top:5%;
 }
 
-.h-margin-r {
-	margin-right: 1.5%
+.h-margin-tmax {
+	margin-top:30%;
 }
 
-.h-margin-l {
-	margin-left:1.5%;
+.h-margin-tb {
+	margin:1% 0;
 }
 
 .maximum {
@@ -740,13 +719,14 @@ ul {
 #b-news {
 	position: relative;
 	height: auto;
-	width: 100%;
 	overflow: hidden;
 	padding:0 0 30px;
+	width:98%;
+	margin:0 auto;
 }
 
 #b-news ul {
-	width: 2000px;
+	width: 1650px;
 	height: auto;
 }
 
@@ -770,8 +750,12 @@ ul {
 }
 
 .item-news {
-	width:13%;
+	width:16%;
 	display:inline-block;
+}
+
+.b-menu {
+	cursor:pointer;
 }
 
 @media screen and (max-width:1240px){
@@ -844,29 +828,14 @@ ul {
 		width:95%;
 	}
 
-	.b-favorite-here {
-		font-size: 12px;
+	.b-title-favorite {
 		margin: 0;
-		padding: 25px 15px;
+		padding: 1% 3%;
+		width: 100%;
 	}
 
 	.b-dj-ul {
 		height:130px;
-	}
-
-	.l-news {
-		padding: 10px;
-	}
-
-	.b-news {
-		width: 96%;
-		margin: 0 2%;
-		display: block;
-		font-size:12px;
-	}
-
-	.bg-without {
-		margin: 10px 0;
 	}
 
 	.b-faces-voting {
@@ -874,62 +843,28 @@ ul {
 		height: 95px;
 	}
 
-	.b-favorite-here {
-		width: 100%;
+	#bar {
+		display:none;
 	}
 
-	.singer figure {
-	    width: 100%;
-	    position: relative;
-	   	z-index: 5;
-	   	vertical-align: top;
-		top: -28px;
-	}
-
-	.singer figure figcaption {
-	    display: none;
-	}
-
-	.singer figure:hover figcaption {
-	    display: block;
-	   	background-color: rgba(245,130,113,.8);
-	    width: 100%;
-	    margin-top:-88px;
-	   	height:88px;
-	    position: relative;
-	    color: #fff;
-	}
-
-	.total {
-		padding: 5px 7px;
-		float: right;
-		margin-right: 7px;
-		top: 5px;
-		position: relative;
-		z-index: 25;
-	}
-
-	.vote {
-		padding:35px 0 0 0;
-		text-align:center;
-		text-transform: uppercase;
-		font-size: 14px;
-		font-weight: 600;
-	}
-
-	.vote:before {
-		margin:0 20px 0 25px;
-		background: url("images/sprites.png") no-repeat -9999px -9999px;
-		width: 27px;
-		height: 25px;
-		display: inline-block;
-		background-size: 280px;
-		background-position: 0px -140px;
-		content: "";
+	.item-news {
+		display: block;
 	}
 }
 
 @media screen and (max-width:435px){
+	h1 {
+		font-size:1.8em;
+	}
+
+	h3, h4, h5 {
+		font-size:0.8em;
+	}
+
+	p, small {
+		font-size: 0.6em;
+	}
+
 	.h-menu {
 		margin:0 7px;
 	}
@@ -982,8 +917,7 @@ ul {
 		margin-left: 15px;
 	}
 
-	.b-favorite-here {
-		font-size: 12px;
+	.b-title-favorite {
 		margin: 0;
 		padding: 12px 5px;
 		line-height: 40px;
@@ -991,7 +925,6 @@ ul {
 
 	.b-faces-voting {
 		overflow: hidden;
-		height: 100px;
 	}
 
 	.item-photo-person {
@@ -1002,7 +935,11 @@ ul {
 
 @media screen and (max-width:375px){
 	.angle-green-center, .angle-coral-center, .angle-white-center, .angle-gray-center {
-		width:94%;
+		width:93%;
+	}
+
+	h5 {
+		font-size:0.6em;
 	}
 }
 

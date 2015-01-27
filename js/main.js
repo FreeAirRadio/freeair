@@ -15,6 +15,10 @@ $(document).ready(function(){
   moreArrow();
 
   personVoting();
+
+  heightDJ();
+
+  heightUl();
 });
 
 function stickyHeader(){
@@ -26,7 +30,7 @@ function menuFooter(){
 var menu = document.getElementsByTagName("menu");
    if (document.body.clientWidth <= 520){
     	$("menu").hide();
-      	$('.b-name-menu').click(function(){
+      	$('.b-menu').click(function(){
 			$(this).next().slideToggle("normal");
 		});
     } else {
@@ -130,4 +134,23 @@ function personVoting(){
 	    }, function(){
 	    $(".total").css("background-color"," #f58271");
   	});
+}
+
+function heightDJ(){
+	$(window).resize(function () {
+		var heightFont = $('.height').height();
+		var heightMore = $('.b-more').height();
+		var heightDJ = $('.item-banner').height() - heightFont - heightMore;
+			$('.b-dj-ul').css({'height':heightDJ});
+		});
+}
+
+function heightUl(){
+	$(window).resize(function () {
+		var heightPlus = $('.plus').outerHeight();
+		var heightFavorite = $('.b-title-favorite').outerHeight(true);
+		var heightMoreA = $('.b-more-arrow').height();
+		var heightUl = $('.left').height() - heightFavorite - heightMoreA - heightPlus;
+			$('.b-faces-voting').css({'height':heightUl});
+		});
 }
