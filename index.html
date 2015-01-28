@@ -14,67 +14,6 @@
 	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script src="js/Scrollbar.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" charset="utf-8">
-window.addEvent('domready', function(){
-	var myProducts = new ScrollBar('b-news', 'bar', 'knob', {
-		scroll: {
-			duration: 2000,
-			transition: 'elastic:out',
-			onStart: function(){
-			//	console.log('start ' + this.to[0]);
-			},
-			onComplete: function(){
-			//	console.log('complete ' + this.to[0]);
-			}
-		},
-		slider: {
-			offset: -1,
-			onChange: function(pos){
-			//	console.log('change ' + pos);
-			},
-			onComplete: function(pos){
-			//	console.log('complete ' + pos);
-			}
-		},
-		knob: {
-			duration: 1200,
-			transition: 'elastic:out',
-			onStart: function(){
-			//	console.log('start ' + this.to[0].value); // knob position
-			}
-		}
-	});
-	
-	myProducts.set(1);
-	
-	document.id('move0').addEvent('click', function(){ myProducts.set(0); });
-	document.id('move10').addEvent('click', function(){ myProducts.set(10); });
-	document.id('move100').addEvent('click', function(){ myProducts.set(100); });
-	document.id('move1000').addEvent('click', function(){ myProducts.set(1000); });
-	
-	var products = $$('#products li');
-	document.id('move1st').addEvent('click', function(){ myProducts.set(products[0]); });
-	document.id('move2nd').addEvent('click', function(){ myProducts.set(products[1]); });
-	document.id('move3rd').addEvent('click', function(){ myProducts.set(products[2]); });
-	
-	
-	/*document.id('getPos').addEvent('click', function(){
-		console.log(myProducts.steps);
-	});*/
-	
-	
-	// if your link is on the slider
-	document.id('theSixth').addEvents({
-		'mousedown': function(event){
-			event.stop();
-		},
-		'click': function(){
-			myProducts.set(products[5]);
-		}
-	});
-	
-});
-</script>
 </head> 
 <body>
 	
@@ -122,7 +61,7 @@ window.addEvent('domready', function(){
 				<div class="angle angle-center angle-green-center"></div>
 				<div class="angle angle-r angle-green"></div>
 			</div>
-			<div class="grid_12 modul mini bg-green h-padding-tb">
+			<div class="grid_12 modul mini columns bg-green h-padding-tb">
 				<div class="grid_3 visible-sm-3 h-padding-t">
 					<img src="css/images/photo.png" width="" alt="" class="photo-author">
 				</div>
@@ -148,10 +87,10 @@ window.addEvent('domready', function(){
           								</div>
         							</div>
         							<div class="jp-time-holder b-time-holder font-white">
-          								<div class="span_11">
+          								<div class="span_10">
           									<small class="jp-current-time span_11"></small>
           								</div>
-          								<div class="span_1">
+          								<div class="span_2">
           									<small>4:22</small>
           								</div>
         							</div>
@@ -177,7 +116,7 @@ window.addEvent('domready', function(){
 					</div>
 				</div>
 			</div>
-			<div class="grid_12 hidden-xs bg-coral">
+			<div class="grid_12 modul hidden-xs columns bg-coral">
 				<div class="grid_3">21</div>
 				<div class="grid_4">22</div>
 				<div class="grid_5">23</div>
@@ -192,7 +131,7 @@ window.addEvent('domready', function(){
 					<img src="css/images/bgfm.png" width="" alt="" class="item-banner">
 				</div>
 				<div class="grid_6 visible-xs-1">
-					<h1 class="light font-taupe uppercase height">Top Dj's</h1>
+					<h1 class="light font-taupe uppercase item-height">Top Dj's</h1>
 					<section>
 						<ul class="b-dj-ul">
 							<li class="item-photo-person ">
@@ -418,13 +357,13 @@ window.addEvent('domready', function(){
 				<div class="angle angle-r angle-gray"></div>
 			</div>
 			<div class="span_12">
-				<div class="grid_6 modul mini left">
+				<div class="grid_6 modul mini item-block-left">
 					<h1 class="b-shadow h-padding-tb font-white light uppercase">TOP <span class="bold">5</span> Tracks</h1>
 					<div class="grid_12 h-margin-t2">
-						<div class="grid_2 hidden-xs h-margin-t">
+						<div class="grid_2 hidden-sm h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="grid_10 visible-xxs-1">
+						<div class="grid_10 visible-sm-3-1">
 							<div class="item-track inner_12">
 								<div id="jquery_jplayer_2" class="jp-jplayer"></div>
 								<div id="jp_container_2" class="jp-audio">
@@ -443,10 +382,10 @@ window.addEvent('domready', function(){
           										</div>
         									</div>
         									<div class="jp-time-holder">
-		          								<div class="span_11">
+		          								<div class="span_10">
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
-		          								<div class="span_1">
+		          								<div class="span_2">
 		          									<small>4:22</small>
 		          								</div>
         									</div>
@@ -457,10 +396,10 @@ window.addEvent('domready', function(){
 						</div>
 					</div>
 					<div class="grid_12 h-margin-t2">
-						<div class="grid_2 hidden-xs h-margin-t">
+						<div class="grid_2 hidden-sm h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="grid_10 visible-xxs-1">
+						<div class="grid_10 visible-sm-3-1">
 							<div class="item-track inner_12">
 								<div id="jquery_jplayer_3" class="jp-jplayer"></div>
 								<div id="jp_container_3" class="jp-audio">
@@ -479,10 +418,10 @@ window.addEvent('domready', function(){
           										</div>
         									</div>
         									<div class="jp-time-holder">
-		          								<div class="span_11">
+		          								<div class="span_10">
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
-		          								<div class="span_1">
+		          								<div class="span_2">
 		          									<small>4:22</small>
 		          								</div>
         									</div>
@@ -493,10 +432,10 @@ window.addEvent('domready', function(){
 						</div>
 					</div>
 					<div class="grid_12 h-margin-t2">
-						<div class="grid_2 hidden-xs h-margin-t">
+						<div class="grid_2 hidden-sm h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="grid_10 visible-xxs-1">
+						<div class="grid_10 visible-sm-3-1">
 							<div class="item-track inner_12">
 								<div id="jquery_jplayer_4" class="jp-jplayer"></div>
 								<div id="jp_container_4" class="jp-audio">
@@ -515,10 +454,10 @@ window.addEvent('domready', function(){
           										</div>
         									</div>
         									<div class="jp-time-holder">
-		          								<div class="span_11">
+		          								<div class="span_10">
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
-		          								<div class="span_1">
+		          								<div class="span_2">
 		          									<small>4:22</small>
 		          								</div>
         									</div>
@@ -529,10 +468,10 @@ window.addEvent('domready', function(){
 						</div>
 					</div>
 					<div class="grid_12 h-margin-t2">
-						<div class="grid_2 hidden-xs h-margin-t">
+						<div class="grid_2 hidden-sm h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="grid_10 visible-xxs-1">
+						<div class="grid_10 visible-sm-3-1">
 							<div class="item-track inner_12">
 								<div id="jquery_jplayer_5" class="jp-jplayer"></div>
 								<div id="jp_container_5" class="jp-audio">
@@ -551,10 +490,10 @@ window.addEvent('domready', function(){
           										</div>
         									</div>
         									<div class="jp-time-holder">
-		          								<div class="span_11">
+		          								<div class="span_10">
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
-		          								<div class="span_1">
+		          								<div class="span_2">
 		          									<small>4:22</small>
 		          								</div>
         									</div>
@@ -565,10 +504,10 @@ window.addEvent('domready', function(){
 						</div>
 					</div>
 					<div class="grid_12 h-margin-t2">
-						<div class="grid_2 hidden-xs h-margin-t">
+						<div class="grid_2 hidden-sm h-margin-t">
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-						<div class="grid_10 visible-xxs-1">
+						<div class="grid_10 visible-sm-3-1">
 							<div class="item-track inner_12">
 								<div id="jquery_jplayer_6" class="jp-jplayer"></div>
 								<div id="jp_container_6" class="jp-audio">
@@ -587,10 +526,10 @@ window.addEvent('domready', function(){
           										</div>
         									</div>
         									<div class="jp-time-holder">
-		          								<div class="span_11">
+		          								<div class="span_10">
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
-		          								<div class="span_1">
+		          								<div class="span_2">
 		          									<small>4:22</small>
 		          								</div>
         									</div>
@@ -602,7 +541,7 @@ window.addEvent('domready', function(){
 					</div>
 				</div>
 				<div class="grid_6 modul mini">
-					<h1 class="b-shadow h-padding-tb font-white light uppercase plus">Voting</h1>
+					<h1 class="b-shadow h-padding-tb font-white light uppercase item-block-right">Voting</h1>
 					<section>
 						<h5 class="font-white semibold span_12 h-margin-t2 star-rating b-title-favorite">
 							VOTE FOR YOUR FAVORITE ARTIST HERE
@@ -616,7 +555,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -627,7 +566,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -638,7 +577,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -649,7 +588,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -660,7 +599,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -671,7 +610,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -682,7 +621,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -693,7 +632,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -704,7 +643,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -715,7 +654,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -726,7 +665,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -737,7 +676,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -748,7 +687,7 @@ window.addEvent('domready', function(){
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">2011</div>
+									<div class="total">0000</div>
 								</figure>
 							</li>
 						</ul>

@@ -1,26 +1,3 @@
-$(document).ready(function(){
-  stickyHeader();
-
-  menuFooter();
-
-  myPlayers1();
-  myPlayers2();
-  myPlayers3();
-  myPlayers4();
-  myPlayers5();
-  myPlayers6();
-
-  bMore();
-
-  moreArrow();
-
-  personVoting();
-
-  heightDJ();
-
-  heightUl();
-});
-
 function stickyHeader(){
   var fixed = document.getElementsByTagName("header");
     $(fixed).sticky({ topSpacing: 0 });
@@ -28,7 +5,7 @@ function stickyHeader(){
 
 function menuFooter(){
 var menu = document.getElementsByTagName("menu");
-   if (document.body.clientWidth <= 520){
+   if (document.body.clientWidth < 520){
     	$("menu").hide();
       	$('.b-menu').click(function(){
 			$(this).next().slideToggle("normal");
@@ -129,28 +106,130 @@ function moreArrow(){
 }
 
 function personVoting(){
-	$(".person-voting").hover(function(){
-	    $(".total").css("background","none");
+	$(".item-photo-person").hover(function(){
+	     $(this).find(".total").css("background","none");
 	    }, function(){
 	    $(".total").css("background-color"," #f58271");
   	});
 }
 
 function heightDJ(){
-	$(window).resize(function () {
-		var heightFont = $('.height').height();
+	if (document.body.clientWidth > 500){
+		var heightFont = $('.item-height').height();
 		var heightMore = $('.b-more').height();
 		var heightDJ = $('.item-banner').height() - heightFont - heightMore;
 			$('.b-dj-ul').css({'height':heightDJ});
-		});
+	}
 }
 
 function heightUl(){
-	$(window).resize(function () {
-		var heightPlus = $('.plus').outerHeight();
-		var heightFavorite = $('.b-title-favorite').outerHeight(true);
+	if (document.body.clientWidth > 503){
+		var heightPlus = $('.item-block-right').outerHeight();
+		var heightFavorite = $('.b-title-favorite').outerHeight();
 		var heightMoreA = $('.b-more-arrow').height();
-		var heightUl = $('.left').height() - heightFavorite - heightMoreA - heightPlus;
+		var heightUl = $('.item-block-left').height() - heightFavorite - heightMoreA - heightPlus;
 			$('.b-faces-voting').css({'height':heightUl});
-		});
+	} else {
+		$('.b-faces-voting').css({'height':'95'});
+	}
 }
+
+function scrollNews(){
+	if (document.body.clientWidth > 520){
+		window.addEvent('domready', function(){
+			var myProducts = new ScrollBar('b-news', 'bar', 'knob', {
+				scroll: {
+					duration: 2000,
+					transition: 'elastic:out',
+					onStart: function(){
+					//	console.log('start ' + this.to[0]);
+					},
+					onComplete: function(){
+					//	console.log('complete ' + this.to[0]);
+					}
+				},
+				slider: {
+					offset: -1,
+					onChange: function(pos){
+					//	console.log('change ' + pos);
+					},
+					onComplete: function(pos){
+					//	console.log('complete ' + pos);
+					}
+				},
+				knob: {
+					duration: 1200,
+					transition: 'elastic:out',
+					onStart: function(){
+					//	console.log('start ' + this.to[0].value); // knob position
+					}
+				}
+			});
+			
+			myProducts.set(1);
+			
+			document.id('move0').addEvent('click', function(){ myProducts.set(1); });
+			document.id('move10').addEvent('click', function(){ myProducts.set(10); });
+			document.id('move100').addEvent('click', function(){ myProducts.set(100); });
+			document.id('move1000').addEvent('click', function(){ myProducts.set(1000); });
+			
+			var products = $$('#b-news li');
+			document.id('move1st').addEvent('click', function(){ myProducts.set(products[0]); });
+			document.id('move2nd').addEvent('click', function(){ myProducts.set(products[1]); });
+			document.id('move3rd').addEvent('click', function(){ myProducts.set(products[2]); });
+			
+			
+			/*document.id('getPos').addEvent('click', function(){
+				console.log(myProducts.steps);
+			});*/
+			
+			
+			// if your link is on the slider
+			document.id('theSixth').addEvents({
+				'mousedown': function(event){
+					event.stop();
+				},
+				'click': function(){
+					myProducts.set(products[5]);
+				}
+			});
+			
+		});
+	}
+}
+
+
+$(document).ready(function(){
+  stickyHeader();
+
+  menuFooter();
+
+  myPlayers1();
+  myPlayers2();
+  myPlayers3();
+  myPlayers4();
+  myPlayers5();
+  myPlayers6();
+
+  bMore();
+
+  moreArrow();
+
+  personVoting();
+
+  heightDJ();
+
+  heightUl();
+
+  scrollNews();
+});
+
+$(window).resize(function(){
+	heightDJ();
+
+	heightUl();
+
+	menuFooter();
+
+	scrollNews();
+});
