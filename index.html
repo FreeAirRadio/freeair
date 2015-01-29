@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 
 <title>Project</title>
-	<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sticky.js"></script>
@@ -19,6 +18,21 @@
 	<div class="page">
 		<header class="inner_12 bg-white font-black">
 			<div class="grid_2 visible-md-2"><img src="css/images/logo.png" width="120" alt="" class="logo"></div>
+			<div class="grid_3 prefix_1 visible-md-2 right">
+				<div class="jp-jplayer"></div>
+					<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+						<div class="jp-type-single">
+							<div class="jp-gui jp-interface">
+								<div class="jp-volume-controls">
+									<div class="jp-mute" role="button" tabindex="0"> </div>
+									<div class="jp-volume-bar" role="button" tabindex="0">
+										<div class="jp-volume-bar-value"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
 			<div class="grid_7 prefix_1 hidden-prefix visible-md-1">
 				<nav>
 					<li class="h-menu">
@@ -37,21 +51,6 @@
 						<h3><a href="" target="_blank" class="regular font-gray">Galery</a></h3>
 					</li>
 				</nav>
-			</div>
-			<div class="grid_3 prefix_1 hidden-md">
-				<div class="jp-jplayer"></div>
-					<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-						<div class="jp-type-single">
-							<div class="jp-gui jp-interface">
-								<div class="jp-volume-controls">
-									<div class="jp-mute" role="button" tabindex="0"> </div>
-									<div class="jp-volume-bar" role="button" tabindex="0">
-										<div class="jp-volume-bar-value"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 			</div>
 		</header>
 		<div class="l-content">
@@ -99,18 +98,31 @@
 				</div>
 				<div class="grid_5 visible-sm-3-1">
 					<div class="h-margin-tb font-dark grid_12">
-						<p class="b-title grid_12 uppercase h-padding">listen next</p>
-						<div class="b-track grid_12">
-							<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:22</p></div>
-							<div class="item-name-track h-padding"><p>Hot tracks</p></div>
-						</div>
-						<div class="b-active span_12 font-white item-name-track">
-							<div class="item-hour now inner_4 semibold h-padding"><p>15:33</p></div>
-							<div class="item-name-track h-padding"><p>Euro hits TOP40</p></div>
-						</div>
-						<div class="b-track grid_12">
-							<div class="item-hour not-now span_4 semibold h-padding"><p>18:17</p></div>
-							<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+						<p class="b-title grid_12 uppercase h-padding">
+							<span class="b-title-before">listen next</span>
+							<span class="b-title-after"> </span>
+						</p>
+						<div id="b-track">
+							<div class="item-track grid_12">
+								<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:00</p></div>
+								<div class="item-name-track h-padding"><p>TOP 100</p></div>
+							</div>
+							<div class="item-track grid_12">
+								<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:22</p></div>
+								<div class="item-name-track h-padding"><p>Hot tracks</p></div>
+							</div>
+							<div class="item-active span_12 font-white item-name-track">
+								<div class="item-hour now inner_4 semibold h-padding"><p>15:33</p></div>
+								<div class="item-name-track h-padding"><p>Euro hits TOP40</p></div>
+							</div>
+							<div class="item-track grid_12">
+								<div class="item-hour not-now span_4 semibold h-padding"><p>18:17</p></div>
+								<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+							</div>
+							<div class="item-track grid_12">
+								<div class="item-hour not-now span_4 semibold h-padding"><p>20:00</p></div>
+								<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -363,7 +375,7 @@
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10 visible-sm-3-1">
-							<div class="item-track inner_12">
+							<div class="inner_12">
 								<div id="jquery_jplayer_2" class="jp-jplayer"></div>
 								<div id="jp_container_2" class="jp-audio">
   									<div class="jp-type-single">
@@ -399,7 +411,7 @@
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10 visible-sm-3-1">
-							<div class="item-track inner_12">
+							<div class="inner_12">
 								<div id="jquery_jplayer_3" class="jp-jplayer"></div>
 								<div id="jp_container_3" class="jp-audio">
   									<div class="jp-type-single">
@@ -435,7 +447,7 @@
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10 visible-sm-3-1">
-							<div class="item-track inner_12">
+							<div class="inner_12">
 								<div id="jquery_jplayer_4" class="jp-jplayer"></div>
 								<div id="jp_container_4" class="jp-audio">
   									<div class="jp-type-single">
@@ -471,7 +483,7 @@
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10 visible-sm-3-1">
-							<div class="item-track inner_12">
+							<div class="inner_12">
 								<div id="jquery_jplayer_5" class="jp-jplayer"></div>
 								<div id="jp_container_5" class="jp-audio">
   									<div class="jp-type-single">
@@ -507,7 +519,7 @@
 							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
 						<div class="grid_10 visible-sm-3-1">
-							<div class="item-track inner_12">
+							<div class="inner_12">
 								<div id="jquery_jplayer_6" class="jp-jplayer"></div>
 								<div id="jp_container_6" class="jp-audio">
   									<div class="jp-type-single">

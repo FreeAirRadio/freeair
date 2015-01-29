@@ -25,6 +25,9 @@ $("#jquery_jplayer_1").jPlayer({
         swfPath: "/js",
         supplied: "mp3,oga",
         globalVolume: true,
+        play: function() { 
+            $(this).jPlayer("pauseOthers");
+        },
         cssSelectorAncestor: "#jp_container_1"
       });
 }
@@ -39,6 +42,9 @@ $("#jquery_jplayer_2").jPlayer({
         swfPath: "/js",
         supplied: "mp3,oga",
         globalVolume: true,
+        play: function() { 
+            $(this).jPlayer("pauseOthers");
+        },
         cssSelectorAncestor: "#jp_container_2"
       });
 }
@@ -53,6 +59,9 @@ $("#jquery_jplayer_3").jPlayer({
         swfPath: "/js",
         supplied: "mp3,oga",
         globalVolume: true,
+        play: function() { 
+            $(this).jPlayer("pauseOthers");
+        },
         cssSelectorAncestor: "#jp_container_3"
       });
 }
@@ -67,6 +76,9 @@ $("#jquery_jplayer_4").jPlayer({
         swfPath: "/js",
         supplied: "mp3,oga",
         globalVolume: true,
+        play: function() { 
+            $(this).jPlayer("pauseOthers");
+        },
         cssSelectorAncestor: "#jp_container_4"
       });
 }
@@ -81,6 +93,9 @@ $("#jquery_jplayer_5").jPlayer({
         swfPath: "/js",
         supplied: "mp3,oga",
         globalVolume: true,
+        play: function() { 
+            $(this).jPlayer("pauseOthers");
+        },
         cssSelectorAncestor: "#jp_container_5"
       });
 }
@@ -95,20 +110,38 @@ $("#jquery_jplayer_6").jPlayer({
         swfPath: "/js",
         supplied: "mp3,oga",
         globalVolume: true,
+        play: function() { 
+            $(this).jPlayer("pauseOthers");
+        },
         cssSelectorAncestor: "#jp_container_6"
       });
 }
 
 function bMore(){
 	$(".b-more").click(function(){
-		$(".b-dj-ul").animate({scrollTop: "+=97"});
-	});
+      $(".b-dj-ul").animate({scrollTop: "+=97"});
+    });
 }
 
 function moreArrow(){
 	$(".more-arrow").click(function(){
 		$(".b-faces-voting").animate({scrollTop: "+=97"});
 	});
+}
+
+function clickly(){
+	var heightTrack = $('.item-track').outerHeight();
+	var heightBTrack = heightTrack + heightTrack + heightTrack - 1;
+		$('#b-track').css({'height':heightBTrack});
+		$('#b-track').stop().animate({scrollTop: heightTrack});
+	var bTrack = document.getElementById("b-track");
+	var heightAll = heightBTrack.scrollHeight - heightTrack.clientHeight;
+		$(".b-title-before").click(function(){
+			$("#b-track").animate({scrollTop: heightAll});
+		});
+		$(".b-title-after").click(function(){
+			$("#b-track").animate({scrollTop: "+=37"});
+		});
 }
 
 function personVoting(){
@@ -171,35 +204,6 @@ function scrollNews(){
 					}
 				}
 			});
-			
-			myProducts.set(1);
-			
-			document.id('move0').addEvent('click', function(){ myProducts.set(1); });
-			document.id('move10').addEvent('click', function(){ myProducts.set(10); });
-			document.id('move100').addEvent('click', function(){ myProducts.set(100); });
-			document.id('move1000').addEvent('click', function(){ myProducts.set(1000); });
-			
-			var products = $$('#b-news li');
-			document.id('move1st').addEvent('click', function(){ myProducts.set(products[0]); });
-			document.id('move2nd').addEvent('click', function(){ myProducts.set(products[1]); });
-			document.id('move3rd').addEvent('click', function(){ myProducts.set(products[2]); });
-			
-			
-			/*document.id('getPos').addEvent('click', function(){
-				console.log(myProducts.steps);
-			});*/
-			
-			
-			// if your link is on the slider
-			document.id('theSixth').addEvents({
-				'mousedown': function(event){
-					event.stop();
-				},
-				'click': function(){
-					myProducts.set(products[5]);
-				}
-			});
-			
 		});
 	}
 }
@@ -228,6 +232,8 @@ $(document).ready(function(){
   heightUl();
 
   scrollNews();
+
+  clickly();
 });
 
 $(window).resize(function(){
@@ -236,6 +242,8 @@ $(window).resize(function(){
 	heightUl();
 
 	menuFooter();
+
+	clickly();
 
 	scrollNews();
 });
