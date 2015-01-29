@@ -4,16 +4,15 @@
 <meta charset="utf-8">
 
 <title>Project</title>
-	<link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,200,300,400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="js/mootools-1.2.4-core.js"></script>
-	<script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.sticky.js"></script>
 	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/mootools-1.2.4-core.js"></script>
+	<script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
+	<script type="text/javascript" src="js/Scrollbar.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script src="js/Scrollbar.js" type="text/javascript" charset="utf-8"></script>
 </head> 
 <body>
 	
@@ -45,8 +44,8 @@
 						<div class="jp-type-single">
 							<div class="jp-gui jp-interface">
 								<div class="jp-volume-controls">
-									<div class="jp-mute" tabindex="0"> </div>
-									<div class="jp-volume-bar">
+									<div class="jp-mute" role="button" tabindex="0"> </div>
+									<div class="jp-volume-bar" role="button" tabindex="0">
 										<div class="jp-volume-bar-value"></div>
 									</div>
 								</div>
@@ -61,7 +60,7 @@
 				<div class="angle angle-center angle-green-center"></div>
 				<div class="angle angle-r angle-green"></div>
 			</div>
-			<div class="grid_12 modul mini columns bg-green h-padding-tb">
+			<div class="grid_12 columns container modul mini bg-green h-padding-tb">
 				<div class="grid_3 visible-sm-3 h-padding-t">
 					<img src="css/images/photo.png" width="" alt="" class="photo-author">
 				</div>
@@ -90,8 +89,8 @@
           								<div class="span_10">
           									<small class="jp-current-time span_11"></small>
           								</div>
-          								<div class="span_2">
-          									<small>4:22</small>
+          								<div class="span_2" role="timer" aria-label="duration" >
+          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
           								</div>
         							</div>
   								</div>
@@ -116,7 +115,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid_12 modul hidden-xs columns bg-coral">
+			<div class="grid_12 columns container modul mini hidden-xs bg-coral">
 				<div class="grid_3">21</div>
 				<div class="grid_4">22</div>
 				<div class="grid_5">23</div>
@@ -386,7 +385,7 @@
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
 		          								<div class="span_2">
-		          									<small>4:22</small>
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
 		          								</div>
         									</div>
   										</div>
@@ -422,7 +421,7 @@
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
 		          								<div class="span_2">
-		          									<small>4:22</small>
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
 		          								</div>
         									</div>
   										</div>
@@ -458,7 +457,7 @@
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
 		          								<div class="span_2">
-		          									<small>4:22</small>
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
 		          								</div>
         									</div>
   										</div>
@@ -494,7 +493,7 @@
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
 		          								<div class="span_2">
-		          									<small>4:22</small>
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
 		          								</div>
         									</div>
   										</div>
@@ -530,7 +529,7 @@
 		          									<small class="jp-current-time span_11"></small>
 		          								</div>
 		          								<div class="span_2">
-		          									<small>4:22</small>
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
 		          								</div>
         									</div>
   										</div>
