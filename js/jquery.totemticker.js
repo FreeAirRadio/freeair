@@ -48,18 +48,19 @@
 			
 	    	base.ticker = setInterval(function() {
 	    	
-	    		base.$el.find('li:first').animate({
-	            	marginTop: '-' + base.options.row_height,
-	            }, base.options.speed, function() {
-	                $(this).detach().css('marginTop', '0').appendTo(base.$el);
-	            });
+	    		base.$el.find('li:first').click(function(){
+					$('li:first').animate({
+		            	marginTop: '-' + base.options.row_height,
+		            }, base.options.speed, function() {
+		                $(this).detach().css('marginTop', '0').appendTo(base.$el);
+		            });
+	    		});
 	            
 	    	}, base.options.interval);
 	    }
 	    
 	    base.reset_interval = function(){
 	    	clearInterval(base.ticker);
-	    	base.start_interval();
 	    }
 	    
 	    base.stop_interval = function(){
@@ -89,22 +90,6 @@
 		}
 	
 		base.setup_nav = function(){
-			
-			//Stop Button
-			if (typeof(base.options.stop) != "undefined"  && base.options.stop != null){
-				$(base.options.stop).click(function(){
-					base.stop_interval();
-					return false;
-				});
-			}
-			
-			//Start Button
-			if (typeof(base.options.start) != "undefined"  && base.options.start != null){
-				$(base.options.start).click(function(){
-					base.start_interval();
-					return false;
-				});
-			}
 			
 			//Previous Button
 			if (typeof(base.options.previous) != "undefined"  && base.options.previous != null){
