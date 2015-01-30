@@ -117,15 +117,6 @@
 				});
 			}
 			
-			//Stop on mouse hover
-			if (typeof(base.options.mousestop) != "undefined" && base.options.mousestop === true) {
-				base.$el.mouseenter(function(){
-					base.stop_interval();
-				}).mouseleave(function(){
-					base.start_interval();
-				});
-			}
-			
 			/*
 				TO DO List
 				----------------
