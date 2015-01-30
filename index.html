@@ -11,6 +11,17 @@
 	<script type="text/javascript" src="js/mootools-1.2.4-core.js"></script>
 	<script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
 	<script type="text/javascript" src="js/Scrollbar.js"></script>
+	<script type="text/javascript" src="js/jquery.totemticker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#vertical-ticker').totemticker({
+				row_height	:	'37px',
+				next		:	'#ticker-next',
+				previous	:	'#ticker-previous',
+				mousestop	:	true,
+			});
+		});
+	</script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head> 
 <body>
@@ -96,34 +107,45 @@
 							</div>
 						</div>
 				</div>
-				<div class="grid_5 visible-sm-3-1">
+				<div class="grid_5 visible-sm-3-1" id="wrapper">
 					<div class="h-margin-tb font-dark grid_12">
 						<p class="b-title grid_12 uppercase h-padding">
-							<span class="b-title-before">listen next</span>
-							<span class="b-title-after"> </span>
+							<a href="#" id="ticker-previous"> </a>
+							<span>listen next</span>
+							<a href="#" id="ticker-next"> </a>
 						</p>
-						<div id="b-track">
-							<div class="item-track grid_12">
-								<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:00</p></div>
-								<div class="item-name-track h-padding"><p>TOP 100</p></div>
-							</div>
-							<div class="item-track grid_12">
-								<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:22</p></div>
-								<div class="item-name-track h-padding"><p>Hot tracks</p></div>
-							</div>
-							<div class="item-active span_12 font-white item-name-track">
-								<div class="item-hour now inner_4 semibold h-padding"><p>15:33</p></div>
-								<div class="item-name-track h-padding"><p>Euro hits TOP40</p></div>
-							</div>
-							<div class="item-track grid_12">
-								<div class="item-hour not-now span_4 semibold h-padding"><p>18:17</p></div>
-								<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
-							</div>
-							<div class="item-track grid_12">
-								<div class="item-hour not-now span_4 semibold h-padding"><p>20:00</p></div>
-								<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
-							</div>
-						</div>
+						<ul id="vertical-ticker">
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:00</p></div>
+									<div class="item-name-track h-padding"><p>TOP 100</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:22</p></div>
+									<div class="item-name-track h-padding"><p>Hot tracks</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-active span_12 font-white item-name-track">
+									<div class="item-hour now inner_4 semibold h-padding"><p>15:33</p></div>
+									<div class="item-name-track h-padding"><p>Euro hits TOP40</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 semibold h-padding"><p>18:17</p></div>
+									<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 semibold h-padding"><p>20:00</p></div>
+									<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -357,7 +379,7 @@
 							</li>
 						</ul>
 					</section>
-					<div class="b-more">
+					<div class="b-more bg-coral">
 						<div class="with-icon arrow"> </div>
 					</div>
 				</div>
@@ -389,7 +411,7 @@
 									        </ul>
         									<div class="jp-progress span_10 jp-border">
           										<div class="jp-seek-bar">
-           											<div class="jp-play-bar jp-border"></div>
+           											<div class="jp-play-bar bg-coral jp-border"></div>
           										</div>
         									</div>
         									<div class="jp-time-holder">
@@ -425,7 +447,7 @@
 									        </ul>
         									<div class="jp-progress span_10 jp-border">
           										<div class="jp-seek-bar">
-           											<div class="jp-play-bar"></div>
+           											<div class="jp-play-bar bg-coral jp-border"></div>
           										</div>
         									</div>
         									<div class="jp-time-holder">
@@ -461,7 +483,7 @@
 									        </ul>
         									<div class="jp-progress span_10 jp-border">
           										<div class="jp-seek-bar">
-           											<div class="jp-play-bar"></div>
+           											<div class="jp-play-bar bg-coral jp-border"></div>
           										</div>
         									</div>
         									<div class="jp-time-holder">
@@ -497,7 +519,7 @@
 									        </ul>
         									<div class="jp-progress span_10 jp-border">
           										<div class="jp-seek-bar">
-           											<div class="jp-play-bar"></div>
+           											<div class="jp-play-bar bg-coral jp-border"></div>
           										</div>
         									</div>
         									<div class="jp-time-holder">
@@ -533,7 +555,7 @@
 									        </ul>
         									<div class="jp-progress span_10 jp-border">
           										<div class="jp-seek-bar">
-           											<div class="jp-play-bar"></div>
+           											<div class="jp-play-bar bg-coral jp-border"></div>
           										</div>
         									</div>
         									<div class="jp-time-holder">
@@ -566,7 +588,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -577,7 +599,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -588,7 +610,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -599,7 +621,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -610,7 +632,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -621,7 +643,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -632,7 +654,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -643,7 +665,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -654,7 +676,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -665,7 +687,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -676,7 +698,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -687,7 +709,7 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 							<li class="item-photo-person maximum">
@@ -698,12 +720,12 @@
 									<figcaption>
 										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
 									</figcaption>	
-									<div class="total">0000</div>
+									<div class="total bg-coral">0000</div>
 								</figure>
 							</li>
 						</ul>
 					</section>
-					<div class="b-more-arrow more-arrow">
+					<div class="b-more-arrow more-arrow bg-coral">
 						<div class="with-icon arrow"> </div>
 					</div>
 				</div>

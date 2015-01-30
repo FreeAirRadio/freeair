@@ -132,16 +132,7 @@ function moreArrow(){
 function clickly(){
 	var heightTrack = $('.item-track').outerHeight();
 	var heightBTrack = heightTrack + heightTrack + heightTrack - 1;
-		$('#b-track').css({'height':heightBTrack});
-		$('#b-track').stop().animate({scrollTop: heightTrack});
-	var bTrack = document.getElementById("b-track");
-	var heightAll = heightBTrack.scrollHeight - heightTrack.clientHeight;
-		$(".b-title-before").click(function(){
-			$("#b-track").animate({scrollTop: heightAll});
-		});
-		$(".b-title-after").click(function(){
-			$("#b-track").animate({scrollTop: "+=37"});
-		});
+		$('#vertical-ticker').css({'height':heightBTrack});
 }
 
 function personVoting(){
