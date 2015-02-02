@@ -1,443 +1,912 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
 
-	<head>
-		
-		<title>FreeAir Radio</title>
-
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-		<link href='http://fonts.googleapis.com/css?family=Exo+2:700,600,200,300,400,500&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link href="css/960/960_12_col.css" rel="stylesheet" type="text/css">
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.sticky.js"></script>
-		<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-
-		<script>
-			$(document).ready(function() {
-				var menu = document.getElementsByTagName("menu");
-				$("menu").hide();
-				$('.b-name-menu').click(function(){
-					$(this).next().slideToggle("normal");
-				});
-
-				$("#jquery_jplayer_1").jPlayer({
-					ready: function () {
-						$(this).jPlayer("setMedia", {
-							mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-						});
-					},
-					swfPath: "/js",
-					supplied: "mp3,oga"
-				});
-
-				$(".b-more").click(function(){
-					$(".b-faces-track").animate({scrollTop: "+=97"});
-				});
-
-				$(".more-arrow").click(function(){
-					$(".b-faces-voting").animate({scrollTop: "+=97"});
-				});
-			})
-		</script>
-
-	</head>
+<title>Project</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/mootools-1.2.4-core.js"></script>
+	<script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
+	<script type="text/javascript" src="js/Scrollbar.js"></script>
+	<script type="text/javascript" src="js/jquery.totemticker.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#vertical-ticker').totemticker({
+				row_height	:	'37px',
+				next		:	'#ticker-next',
+				previous	:	'#ticker-previous',
+				mousestop	:	true,
+			});
+		});
+	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head> 
+<body>
 	
-	<body>
-	
-		<section class="page" role="document">
-		
-			<header class="inner_12">
-				<div class="grid_2 visible-md-2"><img src="css/images/logo.png" width="120" alt="" class="logo"></div>
-				<div class="visible-md-2 hidden-xl portrait">player</div>
-				<div class="grid_7 prefix_1 hidden-prefix visible-md-1 h-portrait">
-					<nav>
-						<li class="b-menu">News</li>
-						<li class="b-menu">Schedule</li>
-						<li class="b-menu">TOP5</li>
-						<li class="b-menu">DJs</li>
-						<li class="b-menu">Galery</li>
-					</nav>
-				</div>
-				<div class="grid_3 prefix_1 hidden-md">player</div>
-			</header>
-			
-			
-		<section class="l-content" role="main">
-			
-			<div class="span_12">
-				<div class="angle-green-l"></div>
-				<div class="angle-green"></div>
-				<div class="angle-green-r"></div>
-			</div>
-			
-			<div class="grid_12 modul mini b-listen">
-				<div class="grid_3 visible-sm-3">
-					<img src="css/images/photo.png" width="" alt="" class="b-autor">
-				</div>
-				<div class="grid_4 visible-sm-3-2">
-					<div class="b-player">
-						<div class="start-player">
-							<a href="" target="_blank" class="play-pause"> </a>
-							<div class="player-track-name">
-								<span class="autor-track">Christopher Stewart</span><br/>
-								<span class="name-track">The road to space</span>
-							</div>
-							<a href="" target="_blank" class="star-rating"> </a>
-						</div>
-						<div class="track-player">0</div>
-						<div class="timer">
-							<span class="time">-2:01</span>
-							<span class="all-time">4:22</span>
-						</div>
-					</div>
-				</div>
-				<div class="grid_5 visible-sm-3-1">
-					<div class="b-listen-next h-margin-t h-margin-b">
-						<div class="listen-next-name">listen next</div>
-						<div class="listen-past-track">
-							<div class="time-track active">13:22</div>
-							<div class="listen-name-track">Hot tracks</div>
-						</div>
-						<div class="listen-next-track">
-							<div class="time-next-track">15:33</div>
-							<div class="listen-name-track">Euro hits TOP40</div>
-						</div>
-						<div class="listen-past-track">
-							<div class="time-track">18:17</div>
-							<div class="listen-name-track">Celebrity's life</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="grid_12 hidden-xs b-popularity">
-				<div class="grid_3">21</div>
-				<div class="grid_4">22</div>
-				<div class="grid_5">23</div>
-			</div>
-			<div class="span_12">
-				<div class="angle-coral-l"></div>
-				<div class="angle-coral"></div>
-				<div class="angle-coral-r"></div>
-			</div>
-			<div class="inner_12 b-top h-padding-t h-padding-b">
-				<div class="grid_6 visible-xs-1">
-					<img src="css/images/bgfm.png" width="" alt="">
-				</div>
-				<div class="grid_6 visible-xs-1">
-					<span class="b-name-rating">Top Dj's</span>
-					<div class="b-more">
-						<div class="with-icon arrow"> </div>
-					</div>
-					<section class="b-peoples">
-						<ul class="b-faces-track">
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-							<li class="person-track">
-								<a href="" class="dj-a" >
-									<img src="css/images/faces/1.jpg" />
-								</a>
-							</li>
-						</ul>
-					</section>
-				</div>
-			</div>
-			<div class="span_12">
-				<div class="angle-gray-l"></div>
-				<div class="angle-gray"></div>
-				<div class="angle-gray-r"></div>
-			</div>
-			<div class="span_12 b-voting">
-				<div class="grid_6 modul mini">
-					<div class="b-shadow h-padding-t h-padding-b b-music-name">TOP 5 Traks</div>
-					<div class="grid_12 b-music-list">
-						<div class="grid_2 hidden-xs">
-							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
-						</div>
-						<div class="grid_10">
-							<div class="track">
-								<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-								<div id="jp_container_1" class="jp-audio">
-									<div class="jp-type-single">
-										<div class="jp-title name-track push_2">
-											Elly Muse - Hurt
-										</div>
-										<div class="jp-gui jp-interface">
-											<ul class="jp-controls">
-												<li><a href="javascript:;" class="jp-play" tabindex="1">&#61515;</a></li>
-												<li><a href="javascript:;" class="jp-pause" tabindex="1">&#61516;</a></li>
-											</ul>
-											<div class="jp-progress">
-												<div class="jp-seek-bar">
-													<div class="jp-play-bar"></div>
-												</div>
-											</div>
-											<div class="jp-time-holder">
-												<div class="jp-current-time time"></div>
-												<div class="all-time">4:22</div>
-											</div>
-										</div>
+	<div class="page">
+		<header class="inner_12 bg-white font-black">
+			<div class="grid_2 visible-md-2"><img src="css/images/logo.png" width="120" alt="" class="logo"></div>
+			<div class="grid_3 prefix_1 visible-md-2 right">
+				<div class="jp-jplayer"></div>
+					<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+						<div class="jp-type-single">
+							<div class="jp-gui jp-interface">
+								<ul class="jp-controls">
+									<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute"> </a></li>
+									
+								</ul>
+								<div class="jp-volume-controls">
+									<div class="jp-volume-bar" role="button" tabindex="0">
+										<div class="jp-volume-bar-value"></div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="grid_12 b-music-list">
-						<div class="grid_2 hidden-xs">
-							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+			</div>
+			<div class="grid_7 prefix_1 hidden-prefix visible-md-1">
+				<nav>
+					<li class="h-menu">
+						<h3><a href="" target="_blank" class="regular font-gray">News</a></h3>
+					</li>
+					<li class="h-menu">
+						<h3><a href="" target="_blank" class="regular font-gray">Schedule</a></h3>
+					</li>
+					<li class="h-menu">
+						<h3><a href="" target="_blank" class="regular font-gray">TOP5</a></h3>
+					</li>
+					<li class="h-menu">
+						<h3><a href="" target="_blank" class="regular font-gray">DJs</a></h3>
+					</li>
+					<li class="h-menu">
+						<h3><a href="" target="_blank" class="regular font-gray">Galery</a></h3>
+					</li>
+				</nav>
+			</div>
+		</header>
+		<div class="l-content">
+			<div class="span_12">
+				<div class="angle angle-l angle-green"></div>
+				<div class="angle angle-center angle-green-center"></div>
+				<div class="angle angle-r angle-green"></div>
+			</div>
+			<div class="grid_12 columns container modul mini bg-green h-padding-tb">
+				<div class="grid_3 visible-sm-3 h-padding-t">
+					<img src="css/images/photo.png" width="" alt="" class="photo-author">
+				</div>
+				<div class="grid_4 visible-sm-3-2 h-padding-t2">
+						<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+						<div id="jp_container_1" class="jp-audio h-padding-t2">
+  							<div class="jp-type-single grid_12">
+  								<div class="span_2">
+  									<ul class="jp-controls">
+  										<li><a href="" class="jp-play item-play" tabindex="1"> </a></li>
+  										<li><a href="" class="jp-pause item-pause" tabindex="1"> </a></li>
+  									</ul>
+  								</div>
+    							<div class="jp-title span_7">
+									<p class="font-dark">Christopher Stewart</p>
+									<p class="font-white semibold">The road to space</p>
+    							</div>
+    							<a href="" target="_blank" class="star-rating span_3"> </a>
+    							<div class="jp-gui jp-interface span_12">
+        							<div class="jp-progress jp-border span_12 b-player-progress">
+          								<div class="jp-seek-bar">
+           									<div class="jp-play-bar bg-white jp-border"></div>
+          								</div>
+        							</div>
+        							<div class="jp-time-holder b-time-holder font-white">
+          								<div class="span_10">
+          									<small class="jp-current-time span_11"></small>
+          								</div>
+          								<div class="span_2" role="timer" aria-label="duration" >
+          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
+          								</div>
+        							</div>
+  								</div>
+							</div>
 						</div>
-						<div class="grid_10">
-						</div>
+				</div>
+				<div class="grid_5 visible-sm-3-1" id="wrapper">
+					<div class="h-margin-tb font-dark grid_12">
+						<p class="b-title grid_12 uppercase h-padding">
+							<a href="#" id="ticker-previous"> </a>
+							<span>listen next</span>
+							<a href="#" id="ticker-next"> </a>
+						</p>
+						<ul id="vertical-ticker">
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:00</p></div>
+									<div class="item-name-track h-padding"><p>TOP 100</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 font-coral semibold h-padding"><p>13:22</p></div>
+									<div class="item-name-track h-padding"><p>Hot tracks</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-active span_12 font-white item-name-track">
+									<div class="item-hour now inner_4 semibold h-padding"><p>15:33</p></div>
+									<div class="item-name-track h-padding"><p>Euro hits TOP40</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 semibold h-padding"><p>18:17</p></div>
+									<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+								</div>
+							</li>
+							<li>
+								<div class="item-track grid_12">
+									<div class="item-hour not-now span_4 semibold h-padding"><p>20:00</p></div>
+									<div class="item-name-track h-padding"><p>Celebrity's life</p></div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="grid_6 modul mini">
-					<div class="b-shadow h-padding-t h-padding-b b-music-name">Voting</div>
-					<section class="b-voting">
-						<div class="b-favorite-here">
-							VOTE FOR YOUR FAVORITE ARTIST HERE
-						</div>
-						<div class="b-more-arrow more-arrow">
-							<div class="with-icon arrow"> </div>
-						</div>
-						<ul class="b-faces-voting">
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+			</div>
+			<div class="grid_12 columns container modul mini hidden-xs bg-coral">
+				<div class="grid_3">21</div>
+				<div class="grid_4">22</div>
+				<div class="grid_5">23</div>
+			</div>
+			<div class="span_12">
+				<div class="angle angle-l angle-coral"></div>
+				<div class="angle angle-center angle-coral-center"></div>
+				<div class="angle angle-r angle-coral"></div>
+			</div>
+			<div class="inner_12 bg-white h-padding-tb">
+				<div class="grid_6 visible-xs-1">
+					<img src="css/images/bgfm.png" width="" alt="" class="item-banner">
+				</div>
+				<div class="grid_6 visible-xs-1">
+					<h1 class="light font-taupe uppercase item-height">Top Dj's</h1>
+					<section>
+						<ul class="b-dj-ul">
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
-							<li class="person-voting">
-								<a href="" class="favorite" >
-									<img src="css/images/favorite/1.jpg" />
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
+								</a>
+							</li>
+							<li class="item-photo-person ">
+								<a href="" class="dj-a" >
+									<figure>
+										<img src="css/images/faces/1.jpg" />
+										<figcaption>
+											<h6 class="font-white semibold">Emily Muse</h6>
+										</figcaption>
+									</figure>
 								</a>
 							</li>
 						</ul>
 					</section>
+					<div class="b-more bg-coral">
+						<div class="with-icon arrow"> </div>
+					</div>
 				</div>
 			</div>
 			<div class="span_12">
-				<div class="angle-white-l"></div>
-				<div class="angle-white"></div>
-				<div class="angle-white-r"></div>
+				<div class="angle angle-l angle-gray"></div>
+				<div class="angle angle-center angle-gray-center"></div>
+				<div class="angle angle-r angle-gray"></div>
 			</div>
-			<div class="inner_12 b-slider">
-				<ul class="b-block-news">
-					<li class="b-news">
-						<div>
-							<div class="b-news-image">
-								<img src="css/images/news.jpg" width="" alt="">
-							</div>
-							<div class="b-name-news">He's still trying to win her back</div>
-							<div class="b-more-news">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</div>
+			<div class="span_12">
+				<div class="grid_6 modul mini item-block-left">
+					<h1 class="b-shadow h-padding-tb font-white light uppercase">TOP <span class="bold">5</span> Tracks</h1>
+					<div class="grid_12 h-margin-t2">
+						<div class="grid_2 hidden-sm h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
 						</div>
-					</li>
-					<li class="b-news">
-						<div >
-							<div class="b-news-image">
-								<img src="css/images/news.jpg" width="" alt="">
+						<div class="grid_10 visible-sm-3-1">
+							<div class="inner_12">
+								<div id="jquery_jplayer_2" class="jp-jplayer"></div>
+								<div id="jp_container_2" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title push_2">
+    										<h4 class="name-track regular">Elly Muse - Hurt</h4>
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="javascript:;" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="javascript:;" class="jp-pause" tabindex="1"> </a></li>		
+												<li><a href="javascript:;" class="jp-mute hidden" tabindex="1" title="mute"> </a></li>
+									        </ul>
+        									<div class="jp-progress span_10 jp-border">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar bg-coral jp-border"></div>
+          										</div>
+        									</div>
+		        							<div class="jp-volume-controls hidden">
+												<div class="jp-volume-bar" role="button" tabindex="0">
+													<div class="jp-volume-bar-value"></div>
+												</div>
+											</div>
+        									<div class="jp-time-holder">
+		          								<div class="span_10">
+		          									<small class="jp-current-time span_11"></small>
+		          								</div>
+		          								<div class="span_2">
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
+		          								</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
 							</div>
-							<div class="b-name-news">He's still trying to win her back</div>
-							<div class="b-more-news">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</div>
 						</div>
-					</li>
-					<li class="b-news">
-						<div>
-							<div class="b-news-image">
-								<img src="css/images/news.jpg" width="" alt="">
+					</div>
+					<div class="grid_12 h-margin-t2">
+						<div class="grid_2 hidden-sm h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10 visible-sm-3-1">
+							<div class="inner_12">
+								<div id="jquery_jplayer_3" class="jp-jplayer"></div>
+								<div id="jp_container_3" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title push_2">
+    										<h4 class="name-track regular">Elly Muse - Hurt</h4>
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="javascript:;" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="javascript:;" class="jp-pause" tabindex="1"> </a></li>		
+												<li><a href="javascript:;" class="jp-mute hidden" tabindex="1" title="mute"> </a></li>
+									        </ul>
+        									<div class="jp-progress span_10 jp-border">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar bg-coral jp-border"></div>
+          										</div>
+        									</div>
+		        							<div class="jp-volume-controls hidden">
+												<div class="jp-volume-bar" role="button" tabindex="0">
+													<div class="jp-volume-bar-value"></div>
+												</div>
+											</div>
+        									<div class="jp-time-holder">
+		          								<div class="span_10">
+		          									<small class="jp-current-time span_11"></small>
+		          								</div>
+		          								<div class="span_2">
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
+		          								</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
 							</div>
-							<div class="b-name-news">He's still trying to win her back</div>
-							<div class="b-more-news">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</div>
 						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="clear"></div>
-			</section>
-			<div class="grid_12 h-footer"></div>
-
-			<footer>
-			<div class="span_4 push_1 hidden-push visible-md-3 visible-xs-1 visible-xxs-1">
-				<div class="b-name-menu">ABOUT</div>
-				<menu>
-					<li class="f-menu">About FreeAir Radio</li>
-					<li class="f-menu">Site Feedback</li>
-					<li class="f-menu">Contact us</li>
-					<li class="f-menu">Advertise with Us</li>
-					<li class="f-menu">Careers - We're Hiring</li>
-					<li class="f-menu">Engineering Blog</li>
-					<li class="f-menu">Terms of Service and Use</li>
-					<li class="f-menu">Privacy Policy</li>
-					<li class="f-menu">Small Business Advertising</li>
-					<li class="f-menu">Advertising Choices</li>
-				</menu>
-				</div>
-				<div class="span_2 visible-md-3 visible-xs-1 visible-xxs-1">
-					<div class="b-name-menu">DIRECTORIES</div>
-					<menu>
-						<li class="f-menu">About FreeAir Radio</li>
-						<li class="f-menu">Celebrity’s life</li>
-						<li class="f-menu">Mobile App</li>
-						<li class="f-menu">TOP40 tracks</li>
-						<li class="f-menu">Site Galery</li>
-						<li class="f-menu">DJs</li>
-						<li class="f-menu">Site Map</li>
-					</menu>
-				</div>
-				<div class="span_3 visible-md-3 visible-xs-1 visible-xxs-1">
-					<div class="b-name-menu">FREEAIR</div>
-					<menu>
-						<li class="f-menu">About FreeAir Radio</li>
-						<li class="f-menu">Vacancies</li>
-						<li class="f-menu">FAQ</li>
-						<li class="f-menu">Popular questions</li>
-					</menu>
-					<div class="b-name-social">SOCIAL NETWORKS</div>
-					<div class="b-social">
-						<a href="" target="_blank" class="b-icons fb"> </a>
-						<a href="" target="_blank" class="b-icons tw"> </a>
-						<a href="" target="_blank" class="b-icons go"> </a>
-						<a href="" target="_blank" class="b-icons yt"> </a>
+					</div>
+					<div class="grid_12 h-margin-t2">
+						<div class="grid_2 hidden-sm h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10 visible-sm-3-1">
+							<div class="inner_12">
+								<div id="jquery_jplayer_4" class="jp-jplayer"></div>
+								<div id="jp_container_4" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title push_2">
+    										<h4 class="name-track regular">Elly Muse - Hurt</h4>
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="javascript:;" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="javascript:;" class="jp-pause" tabindex="1"> </a></li>		
+												<li><a href="javascript:;" class="jp-mute hidden" tabindex="1" title="mute"> </a></li>
+									        </ul>
+        									<div class="jp-progress span_10 jp-border">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar bg-coral jp-border"></div>
+          										</div>
+        									</div>
+		        							<div class="jp-volume-controls hidden">
+												<div class="jp-volume-bar" role="button" tabindex="0">
+													<div class="jp-volume-bar-value"></div>
+												</div>
+											</div>
+        									<div class="jp-time-holder">
+		          								<div class="span_10">
+		          									<small class="jp-current-time span_11"></small>
+		          								</div>
+		          								<div class="span_2">
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
+		          								</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_12 h-margin-t2">
+						<div class="grid_2 hidden-sm h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10 visible-sm-3-1">
+							<div class="inner_12">
+								<div id="jquery_jplayer_5" class="jp-jplayer"></div>
+								<div id="jp_container_5" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title push_2">
+    										<h4 class="name-track regular">Elly Muse - Hurt</h4>
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="javascript:;" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="javascript:;" class="jp-pause" tabindex="1"> </a></li>		
+												<li><a href="javascript:;" class="jp-mute hidden" tabindex="1" title="mute"> </a></li>
+									        </ul>
+        									<div class="jp-progress span_10 jp-border">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar bg-coral jp-border"></div>
+          										</div>
+        									</div>
+		        							<div class="jp-volume-controls hidden">
+												<div class="jp-volume-bar" role="button" tabindex="0">
+													<div class="jp-volume-bar-value"></div>
+												</div>
+											</div>
+        									<div class="jp-time-holder">
+		          								<div class="span_10">
+		          									<small class="jp-current-time span_11"></small>
+		          								</div>
+		          								<div class="span_2">
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
+		          								</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="grid_12 h-margin-t2">
+						<div class="grid_2 hidden-sm h-margin-t">
+							<img src="css/images/faces/rait.jpg" width="" alt="" class="b-rating">
+						</div>
+						<div class="grid_10 visible-sm-3-1">
+							<div class="inner_12">
+								<div id="jquery_jplayer_6" class="jp-jplayer"></div>
+								<div id="jp_container_6" class="jp-audio">
+  									<div class="jp-type-single">
+    									<div class="jp-title push_2">
+    										<h4 class="name-track regular">Elly Muse - Hurt</h4>
+    									</div>
+    									<div class="jp-gui jp-interface">
+									        <ul class="jp-controls">
+									        	<li><a href="javascript:;" class="jp-play" tabindex="1"> </a></li>
+									        	<li><a href="javascript:;" class="jp-pause" tabindex="1"> </a></li>		
+												<li><a href="javascript:;" class="jp-mute hidden" tabindex="1" title="mute"> </a></li>
+									        </ul>
+        									<div class="jp-progress span_10 jp-border">
+          										<div class="jp-seek-bar">
+           											<div class="jp-play-bar bg-coral jp-border"></div>
+          										</div>
+        									</div>
+		        							<div class="jp-volume-controls hidden">
+												<div class="jp-volume-bar" role="button" tabindex="0">
+													<div class="jp-volume-bar-value"></div>
+												</div>
+											</div>
+        									<div class="jp-time-holder">
+		          								<div class="span_10">
+		          									<small class="jp-current-time span_11"></small>
+		          								</div>
+		          								<div class="span_2">
+		          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
+		          								</div>
+        									</div>
+  										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="span_3 hidden-md">
-
+				<div class="grid_6 modul mini">
+					<h1 class="b-shadow h-padding-tb font-white light uppercase item-block-right">Voting</h1>
+					<section>
+						<h5 class="font-white semibold span_12 h-margin-t2 star-rating b-title-favorite">
+							VOTE FOR YOUR FAVORITE ARTIST HERE
+						</h5>
+						<ul class="b-faces-voting">
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+							<li class="item-photo-person maximum">
+								<figure>
+									<a href="" >
+										<img src="css/images/favorite/1.jpg" />
+									</a>
+									<figcaption>
+										<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+									</figcaption>	
+									<div class="total bg-coral">0000</div>
+								</figure>
+							</li>
+						</ul>
+					</section>
+					<div class="b-more-arrow more-arrow bg-coral">
+						<div class="with-icon arrow"> </div>
+					</div>
 				</div>
-				<div class="clear"></div>
-			</footer>
-		</section>
+			</div>
+			<div class="span_12 h-margin-t2">
+				<div class="angle angle-l angle-white"></div>
+				<div class="angle angle-center angle-white-center"></div>
+				<div class="angle angle-r angle-white"></div>
+			</div>
+			<div class="inner_12 bg-white h-padding-tb2">
+				<div id="b-news">
+					<ul>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+						<li class="item-news visible-xs-1">
+							<div class="visible-xs-3-1">
+								<img src="css/images/news.jpg" width="" alt="">
+							</div>
+							<div class="visible-xs-3-2">
+								<p>
+									<a href="" class="bold font-coral" target="_blank">
+										He's still trying to win her back
+									</a>
+								</p>
+								<small class="font-dark">The couple, married since 2005, mutually decided to separate in February, and since then singer Thicke has been trying to win her back with his performances.</small>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="bar"><div id="knob"></div> </div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="grid_12 h-footer"> </div>
+		<footer>
+			<div class="span_4 push_1 hidden-push visible-md-3 visible-xs-1 visible-xxs-1">
+				<h3 class="bold font-salmon b-menu">ABOUT</h3>
+				<menu>
+					<li><p>About FreeAir Radio</p></li>
+					<li><p>Site Feedback</p></li>
+					<li><p>Contact us</p></li>
+					<li><p>Advertise with Us</p></li>
+					<li><p>Careers - We're Hiring</p></li>
+					<li><p>Engineering Blog</p></li>
+					<li><p>Terms of Service and Use</p></li>
+					<li><p>Privacy Policy</p></li>
+					<li><p>Business Advertising</p></li>
+					<li><p>Advertising Choices</p></li>
+				</menu>
+			</div>
+			<div class="span_2 visible-md-3 visible-xs-1 visible-xxs-1">
+				<h3 class="bold font-salmon b-menu">DIRECTORIES</h3>
+				<menu>
+					<li><p>About FreeAir Radio</p></li>
+					<li><p>Celebrity’s life</p></li>
+					<li><p>Mobile App</p></li>
+					<li><p>TOP40 tracks</p></li>
+					<li><p>Site Galery</p></li>
+					<li><p>DJs</p></li>
+					<li><p>Site Map</p></li>
+				</menu>
+			</div>
+			<div class="span_3 visible-md-3 visible-xs-1 visible-xxs-1">
+				<h3 class="bold font-salmon b-menu">FREEAIR</h3>
+				<menu>
+					<li><p>About FreeAir Radio</p></li>
+					<li><p>Vacancies</p></li>
+					<li><p>FAQ</p></li>
+					<li><p>Popular questions</p></li>
+				</menu>
+				<h3 class="bold font-salmon">SOCIAL NETWORKS</h3>
+				<div class="b-social">
+					<a href="" target="_blank" class="b-icons fb"> </a>
+					<a href="" target="_blank" class="b-icons tw"> </a>
+					<a href="" target="_blank" class="b-icons go"> </a>
+					<a href="" target="_blank" class="b-icons yt"> </a>
+				</div>
+			</div>
+			<div class="span_3 hidden-md">
 
-	</body>
+			</div>
+			<div class="clear"></div>
+		</footer>
+	</div>
+
+</body>
 
 </html>

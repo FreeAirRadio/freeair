@@ -1,0 +1,115 @@
+@font-face {
+    font-family: Light;
+    src: url(../fonts/Exo2.0-Thin.otf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(../fonts/Exo2.0-ExtraLight.otf);
+}
+
+@font-face {
+    font-family: Semibold;
+    src: url(../fonts/Exo2.0-Regular.otf);
+}
+
+@font-face {
+    font-family: Bold;
+    src: url(../fonts/Exo2.0-Semibold.otf);
+}
+
+@font-face {
+    font-family: Medium;
+    src: url(../fonts/Exo2.0-Medium.otf);
+}
+
+html {
+	background-image: url(images/bg.png);
+}
+
+h1 {
+	font-size:2.8em;
+	line-height:1.2em;
+}
+
+h2 {
+	font-size:1.2em;
+}
+
+h3 {
+	font-size:1em;
+	line-height:18px;
+}
+
+h4 {
+	font-size:0.9em;
+	line-height:18px;
+}
+
+h5 {
+	font-size:0.9em;
+	line-height:14px;
+}
+
+h6 {
+	font-size:0.8em;
+	line-height:14px;
+}
+
+p {
+	font-size:0.8em;
+	line-height:18px;
+}
+
+small {
+	font-size:0.7em;
+	line-height:14px;
+}
+
+.light {
+	font-family: Light;
+}
+
+.regular {
+    font-family: Regular;
+}
+
+.semibold {
+    font-family: Semibold;
+}
+
+.bold {
+    font-family: Bold;
+}
+
+.font-gray {
+	color:#3a3a3a;
+}
+
+.font-white {
+	color:#fff;
+}
+
+.font-coral {
+	color:#f58271;
+}
+
+.font-salmon {
+	color:#c75545;
+}
+
+.font-dark {
+	color:#575757;
+}
+
+.font-taupe {
+	color:#363636;
+}
+
+.font-black {
+	color:#000;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
