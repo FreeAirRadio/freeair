@@ -1,7 +1,3 @@
-html {
-	background-image: url(images/bg.png);
-}
-
 html, body {
 	height:100%;
 	width:100%;
@@ -10,6 +6,16 @@ html, body {
 	font-family: Medium;
 	font-size:1.1em;
 	font-weight:400;
+}
+
+html {
+	background: url(images/bgs.png), rgba(148,148,148,1);
+	background: url(images/bgs.png), -moz-linear-gradient(left, rgba(148,148,148,1) 0%, rgba(82,82,82,1) 29%, rgba(72,72,72,1) 51%, rgba(41,41,41,1) 75%, rgba(0,0,0,1) 100%);
+	background: url(images/bgs.png), -webkit-gradient(left top, right top, color-stop(0%, rgba(148,148,148,1)), color-stop(29%, rgba(82,82,82,1)), color-stop(51%, rgba(72,72,72,1)), color-stop(75%, rgba(41,41,41,1)), color-stop(100%, rgba(0,0,0,1)));
+	background: url(images/bgs.png), -webkit-linear-gradient(left, rgba(148,148,148,1) 0%, rgba(82,82,82,1) 29%, rgba(72,72,72,1) 51%, rgba(41,41,41,1) 75%, rgba(0,0,0,1) 100%);
+	background: url(images/bgs.png), -o-linear-gradient(left, rgba(148,148,148,1) 0%, rgba(82,82,82,1) 29%, rgba(72,72,72,1) 51%, rgba(41,41,41,1) 75%, rgba(0,0,0,1) 100%);
+	background: url(images/bgs.png), -ms-linear-gradient(left, rgba(148,148,148,1) 0%, rgba(82,82,82,1) 29%, rgba(72,72,72,1) 51%, rgba(41,41,41,1) 75%, rgba(0,0,0,1) 100%);
+	background: url(images/bgs.png), linear-gradient(to right, rgba(148,148,148,1) 0%, rgba(82,82,82,1) 29%, rgba(72,72,72,1) 51%, rgba(41,41,41,1) 75%, rgba(0,0,0,1) 100%);
 }
 
 .page {
@@ -112,7 +118,7 @@ menu {
 
 .h-menu {
 	display: inline-block;
-	margin: 0 25px;
+	margin: 0 3.5%;
 }
 
 .logo {
@@ -619,4 +625,10 @@ ul {
 
 .hidden {
 	display:none;
+}
+
+.trapezoid {
+    border-top: 6px solid red;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
