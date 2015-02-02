@@ -41,6 +41,20 @@ div[class*="span"] {
   float: left;
 }
 
+div[class*="modul"] {
+  display: inline;
+  float: left;
+  padding: 0 10px;
+  width:100%;
+}
+
+div[class*="columns"] {
+  display: inline;
+  float: left;
+  padding: 0 10px;
+  width:50%;
+}
+
 div[class*="push"], div[class*="pull"] {
   position: relative;
 }
@@ -101,6 +115,10 @@ div[class*="push"], div[class*="pull"] {
 
  .span_4, .inner_4 {
   width: 33.333%;
+}
+
+ .span_6 {
+  width: 49.999%;
 }
 
  .span_7 {
@@ -218,7 +236,7 @@ div[class*="visible"] {
   }
 }
 
-@media screen and (max-width:532px){
+@media screen and (max-width:620px){
   .visible-xs-3-1 {
     display: inline;
     width:31.333%;
@@ -234,12 +252,11 @@ div[class*="visible"] {
     width:98%;
   }
 
-  div[class*="modul"] {
+  div[class*="mini"] {
     display: inline;
-    width:95%;
+    width:100%;
     float: left;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin:0;
   }
 
   .hidden-xs {

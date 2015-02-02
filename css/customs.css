@@ -125,57 +125,29 @@ menu {
 	width: auto;
 }
 
-/*Angle*/
-.angle {
-	float:left;
-    display:inline-block;
-    z-index:2;
-}
-
-.angle-center {
-	width:98.5%;
-	height:6px;
-}
-
-.angle-l {
-    border-left: 10px solid transparent;
-}
-
-.angle-r {
-    border-right: 10px solid transparent;
-    margin-right:-10px;
-}
-
-.angle-green {
+/*Trapezoid*/
+.trapezoid-green {
     border-top: 6px solid rgba(137,184,180,.8);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
-.angle-green-center {
-    background-color: rgba(137,184,180,.8);
-}
-
-.angle-coral {
+.trapezoid-coral {
     border-bottom: 6px solid #f9b8ae;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
-.angle-coral-center {
-	background-color: #f9b8ae;
-}
-
-.angle-gray {
+.trapezoid-gray {
     border-top: 6px solid #cfcfcf;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
-.angle-gray-center {
-	background-color: #cfcfcf;
-}
-
-.angle-white {
+.trapezoid-white {
     border-bottom: 6px solid #cfcfcf;
-}
-
-.angle-white-center {
-	background-color: #cfcfcf;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
 /*Styles for l-player*/
@@ -625,10 +597,4 @@ ul {
 
 .hidden {
 	display:none;
-}
-
-.trapezoid {
-    border-top: 6px solid red;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
 }

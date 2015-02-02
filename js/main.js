@@ -146,15 +146,15 @@ $("#jquery_jplayer_6").jPlayer({
 }
 
 function bMore(){
-	$(".b-more").click(function(){
+  $(".b-more").click(function(){
       $(".b-dj-ul").animate({scrollTop: "+=97"});
     });
 }
 
 function moreArrow(){
-	$(".more-arrow").click(function(){
-		$(".b-faces-voting").animate({scrollTop: "+=97"});
-	});
+  $(".more-arrow").click(function(){
+    $(".b-faces-voting").animate({scrollTop: "+=97"});
+  });
 }
 
 function clickly(){
@@ -172,7 +172,7 @@ function personVoting(){
 }
 
 function heightDJ(){
-	if (document.body.clientWidth > 500){
+	if (document.body.clientWidth > 603){
 		var heightFont = $('.item-height').height();
 		var heightMore = $('.b-more').height();
 		var heightDJ = $('.item-banner').height() - heightFont - heightMore;
@@ -181,7 +181,7 @@ function heightDJ(){
 }
 
 function heightUl(){
-	if (document.body.clientWidth > 503){
+	if (document.body.clientWidth > 603){
 		var heightPlus = $('.item-block-right').outerHeight();
 		var heightFavorite = $('.b-title-favorite').outerHeight();
 		var heightMoreA = $('.b-more-arrow').height();
@@ -190,6 +190,15 @@ function heightUl(){
 	} else {
 		$('.b-faces-voting').css({'height':'95'});
 	}
+}
+
+function playList(){
+  $('#vertical-ticker').totemticker({
+    row_height  : '37px',
+    next    : '#ticker-next',
+    previous  : '#ticker-previous',
+    mousestop : true,
+  });
 }
 
 function scrollNews(){
@@ -244,6 +253,8 @@ $(document).ready(function(){
   heightDJ();
 
   heightUl();
+
+  playList();
 
   scrollNews();
 
