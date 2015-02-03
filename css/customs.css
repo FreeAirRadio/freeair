@@ -247,7 +247,6 @@ menu {
 
 .jp-gui {
 	position: relative;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f34927', endColorstr='#dd3311',GradientType=0 );
     border-radius: 3px;
 	overflow: hidden;
 }
@@ -607,4 +606,9 @@ ul {
 
 .hidden {
 	display:none;
+}
+
+#container {
+	height: 150px;
+	margin: 0 auto;
 }
