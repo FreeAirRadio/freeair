@@ -201,41 +201,9 @@ function playList(){
   });
 }
 
-function scrollNews(){
-	if (document.body.clientWidth > 520){
-		window.addEvent('domready', function(){
-			var myProducts = new ScrollBar('b-news', 'bar', 'knob', {
-				scroll: {
-					duration: 2000,
-					transition: 'elastic:out',
-					onStart: function(){
-					//	console.log('start ' + this.to[0]);
-					},
-					onComplete: function(){
-					//	console.log('complete ' + this.to[0]);
-					}
-				},
-				slider: {
-					offset: -1,
-					onChange: function(pos){
-					//	console.log('change ' + pos);
-					},
-					onComplete: function(pos){
-					//	console.log('complete ' + pos);
-					}
-				},
-				knob: {
-					duration: 1200,
-					transition: 'elastic:out',
-					onStart: function(){
-					//	console.log('start ' + this.to[0].value); // knob position
-					}
-				}
-			});
-		});
-	}
+function scrollnews(){
+  $('#b-news').horizontalScroll();
 }
-
 
 $(document).ready(function(){
   stickyHeader();
@@ -256,9 +224,9 @@ $(document).ready(function(){
 
   playList();
 
-  scrollNews();
-
   clickly();
+
+  scrollnews();
 });
 
 $(window).resize(function(){
@@ -270,5 +238,5 @@ $(window).resize(function(){
 
 	clickly();
 
-	scrollNews();
+  scrollnews();
 });
