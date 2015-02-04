@@ -165,9 +165,9 @@ function clickly(){
 
 function personVoting(){
 	$(".item-photo-person").hover(function(){
-	     $(this).find(".total").css("background","none");
+	     $(this).find("#total").css("background","none");
 	    }, function(){
-	    $(".total").css("background-color"," #f58271");
+	    $("#total").css("background-color"," #f58271");
   	});
 }
 
@@ -209,6 +209,7 @@ function diagram(){
   $(function () {
     $('#container').highcharts({
         chart: {
+            type: 'spline',
             zoomType: 'x'
         },
         title: {
@@ -266,6 +267,41 @@ function diagram(){
 });
 }
 
+function vote(){
+    dojo.addOnLoad(function() {
+    var vote_btn = dojo.byId("vote_btn");
+
+    var total   = 0;
+
+    
+    dojo.connect(vote_btn, "onclick", function() {
+
+      dojo.xhrPost({
+        url: "../php/vote.php",
+        content: {act: 'vote'},
+        form: "total",
+        handleAs: "json",
+        load: function(response, ioArgs) {
+          total = response.total;
+            
+          show_vote_results(total);
+  
+          return response;
+        },
+        error: function(response, ioArgs) {
+          console.error("HTTP status code: ", ioArgs.xhr.status);
+          return response;
+        }
+      });
+    });
+
+  });
+
+  function show_vote_results(total) {
+    dojo.byId("total").innerHTML = total;
+  }
+}
+
 $(document).ready(function(){
   stickyHeader();
 
@@ -290,6 +326,8 @@ $(document).ready(function(){
   scrollnews();
 
   diagram();
+
+  vote();
 });
 
 $(window).resize(function(){

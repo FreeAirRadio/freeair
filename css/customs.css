@@ -457,13 +457,17 @@ figure:hover figcaption {
 	opacity:1;
 }
 
-.total {
+#total {
 	padding: 5px 7px;
 	float: right;
 	top:4%;
 	right:4%;
 	position: absolute;
 	z-index: 25;
+}
+
+#vote_btn {
+	cursor:pointer;
 }
 
 /*Styles for more*/

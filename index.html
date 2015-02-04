@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/jquery.horizontal.scroll.js"></script>   
     <script type="text/javascript" src="js/highcharts.js"></script>
 	<script type="text/javascript" src="js/exporting.js"></script>
+	<script type="text/javascript" src="js/dojo.js" djConfig="parseOnLoad:true, isDebug:false, usePlainJson:true"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head> 
 <body>
@@ -602,9 +603,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -613,9 +614,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -624,9 +625,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -635,9 +636,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -646,9 +647,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -657,9 +658,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -668,9 +669,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -679,9 +680,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -690,9 +691,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -701,9 +702,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -712,9 +713,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -723,9 +724,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
@@ -734,9 +735,9 @@
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
 										</figcaption>	
-										<div class="total bg-coral">0000</div>
+										<form id="total" class="bg-coral" method="post"> </form>
 									</figure>
 								</li>
 							</ul>
