@@ -146,14 +146,34 @@ $("#jquery_jplayer_6").jPlayer({
 }
 
 function bMore(){
-  $(".b-more").click(function(){
-      $(".b-dj-ul").animate({scrollTop: "+=97"});
+  $(".arrow-hide-dj").hide();
+  $(".arrow-down-dj").click(function(){
+      $(".b-dj-ul").animate({scrollTop: "+=100"});
+      $(".arrow-hide-dj").show();
+          var heightFont = $('.item-height').height();
+    var heightMore = $('.b-more').height();
+    var heightDJ = $('.item-banner').height() - heightFont - heightMore - heightMore;
+      $('.b-dj-ul').css({'height':heightDJ});
+    });
+    $(".arrow-top-dj").click(function(){
+      $(".b-dj-ul").animate({scrollTop: "0"});
+        $(".arrow-hide-dj").hide();
+            var heightFont = $('.item-height').height();
+    var heightMore = $('.b-more').height();
+    var heightDJ = $('.item-banner').height() - heightFont - heightMore;
+      $('.b-dj-ul').css({'height':heightDJ});
     });
 }
 
 function moreArrow(){
-  $(".more-arrow").click(function(){
-    $(".b-faces-voting").animate({scrollTop: "+=97"});
+    $(".arrow-hide").hide();
+  $(".arrow-down").click(function(){
+    $(".b-faces-voting").animate({scrollTop: "+=100"});
+    $(".arrow-hide").show();
+  });
+  $(".arrow-top").click(function(){
+    $(".b-faces-voting").animate({scrollTop: "0"});
+    $(".arrow-hide").hide();
   });
 }
 
@@ -244,7 +264,7 @@ function diagram(){
                 marker: {
                     radius: 2
                 },
-                lineWidth: 1,
+                lineWidth: 0,
                 states: {
                     hover: {
                         lineWidth: 1
@@ -331,6 +351,10 @@ $(document).ready(function(){
 });
 
 $(window).resize(function(){
+  bMore();
+
+  moreArrow();
+
 	heightDJ();
 
 	heightUl();

@@ -489,8 +489,12 @@ figure:hover figcaption {
 	content:"";
 }
 
-.arrow:before, a:hover.arrow:before {
+.arrow-down-dj:before, a:hover.arrow-down-dj:before, .arrow-down:before, a:hover.arrow-down:before {
 	background-position:-120px -60px;
+}
+
+.arrow-top:before, a:hover.arrow-top:before, .arrow-top-dj:before, a:hover.arrow-top-dj:before {
+	background-position:-180px -60px;
 }
 
 /*Styles for l-voting*/
