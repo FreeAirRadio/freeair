@@ -19,7 +19,7 @@ function myPlayers(){
 $("#jquery_jplayer_1").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
-            mp3: "audio/Bi2-Serebro.mp3"
+            mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
           });
         },
         swfPath: "/js",
@@ -82,7 +82,7 @@ $("#jquery_jplayer_3").jPlayer({
 $("#jquery_jplayer_4").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+            mp3: "audio/Nickelback-Edge_Of_A_Revolution.mp3"
           });
         },
         swfPath: "/js",
