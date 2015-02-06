@@ -150,6 +150,10 @@
 	.h-menu {
 		margin: 0 2.5%;
 	}
+
+	#scrollbar {
+		display: none;
+	}
 }
 
 @media screen and (max-width:435px){
@@ -166,7 +170,7 @@
 	}
 
 	#b-news {
-		height:338px;
+		height:280px;
 	}
 
 	footer {
@@ -242,6 +246,10 @@
 
 	h5 {
 		font-size:0.6em;
+	}
+
+	#b-news {
+		height:323px;
 	}
 }
 

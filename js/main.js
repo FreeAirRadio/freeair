@@ -212,7 +212,9 @@ function playList(){
 }
 
 function scrollnews(){
-  $('#b-news').horizontalScroll();
+  if (document.body.clientWidth > 515){
+    $('#b-news').horizontalScroll();
+  }
 }
 
 function diagram(){
