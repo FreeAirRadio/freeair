@@ -216,6 +216,10 @@ menu {
 	content:"";
 }
 
+.now {
+	width:33.6%;
+}
+
 .now p:before {
 	background:url("images/sprites.png") no-repeat -9999px -9999px; 
 	width:20px; 
@@ -362,7 +366,7 @@ menu {
 	width:15px; 
 	height:14px; 
 	display:inline-block;
-	margin:0 0 -2px 3px;
+	margin:0 0 -2px 9px;
 	background-position: -60px -180px;
 	content:"";
 }
@@ -388,13 +392,13 @@ menu {
 	display: block;
 }
 
+.dj-a:hover img  {
+	visibility: hidden;
+}
+
 .dj-a:hover {
 	background: url(images/faces/01.jpg) no-repeat 0 0;
 	background-size:100%;
-}
-
-.dj-a:hover img  {
-	visibility: hidden;
 }
 
 .dj-a figure {
@@ -419,7 +423,7 @@ menu {
 
 .b-rating {
 	border-radius: 100%;
-	border:5px solid #a9d5cd;
+	border:3px solid #a9d5cd;
 }
 
 .b-title-favorite {
@@ -454,6 +458,15 @@ figure figcaption {
 }
 
 figure:hover figcaption {
+	opacity:1;
+}
+
+.item-level {
+	background-color: rgb(245,130,113);
+	width:20px;
+	height:20px;
+	padding:1px;
+	border-radius:100%;
 	opacity:1;
 }
 
