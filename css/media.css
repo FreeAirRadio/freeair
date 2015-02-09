@@ -1,4 +1,4 @@
-@media screen and (max-width:1240px){
+@media only screen and (max-width:1240px){
 	body {
 		font-size:0.9em;
 	}
@@ -20,7 +20,7 @@
 	}
 }
 
-@media screen and (max-width:960px){
+@media only screen and (max-width:960px){
 	body {
 		font-size:1em;
 	}
@@ -66,7 +66,7 @@
 	}
 }
 
-@media screen and (max-width:768px){
+@media only screen and (max-width:768px){
 	.item-photo-person {
 		width: 33.333%;
 	}
@@ -84,7 +84,7 @@
 	}
 }
 
-@media screen and (max-width:620px){
+@media only screen and (max-width:620px){
 	menu {
 		margin: 0;
 	}
@@ -109,9 +109,19 @@
 		overflow: hidden;
 		height: 95px;
 	}
+
+	.bg-green {
+		border-bottom:none;
+	}
+
+	.trapezoid-coral {
+	    border-bottom: 6px solid rgba(137,184,180,.8);
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	}
 }
 
-@media screen and (max-width:535px){
+@media only screen and (max-width:535px){
 	h1 {
 		font-size:2em;
 	}
@@ -156,7 +166,7 @@
 	}
 }
 
-@media screen and (max-width:435px){
+@media only screen and (max-width:435px){
 	h1 {
 		font-size:1.8em;
 	}
@@ -238,7 +248,7 @@
 	}
 }
 
-@media screen and (max-width:375px){
+@media only screen and (max-width:375px){
 	.item-news {
 		display:block;
 		width:17%;
