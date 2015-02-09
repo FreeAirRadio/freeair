@@ -7,11 +7,12 @@ function menuFooter(){
 var menu = document.getElementsByTagName("menu");
    if (document.body.clientWidth < 520){
     	$("menu").hide();
-      	$('.b-menu').click(function(){
-			$(this).next().slideToggle("normal");
-		});
+      $('.b-menu').click(function(){
+			 $(this).next().stop().slideToggle("normal");
+		  });
     } else {
       $("menu").show();
+      $('.b-menu').unbind('click');
     }
 }
 
