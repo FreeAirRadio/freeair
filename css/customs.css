@@ -252,7 +252,7 @@ menu {
 .jp-gui {
 	position: relative;
     border-radius: 3px;
-	overflow: hidden;
+    cursor:pointer;
 }
 
 .jp-jplayer, .jp-audio {
@@ -262,18 +262,19 @@ menu {
 .jp-play-bar {
 	position:relative;
 	z-index: 9999;
+	height: 6px;
+	padding-left:10px;
+	overflow: visible !important;
 }
 
-.jp-play-bar span {
-	top: -1px;
+.jp-play-bar div {
+	top: -2px;
 	right: 0;
 	position:absolute; 
 	background: url("images/sprites.png") no-repeat center;
 	width:10px; 
 	height:10px; 
-	display: inline-block;
 	background-position: -120px -120px;
-	content: "";
 }
 
 .jp-play:before {
@@ -329,7 +330,6 @@ menu {
     height: 8px;
     border-radius: 20px;
     background-color: #b6cecc;
-    overflow: hidden;
     cursor:pointer;
 }
 
@@ -337,31 +337,25 @@ menu {
     background-color: #618380;
     height: 8px;
     position: relative;
+    padding-left:10px;
     border-radius: 20px;
 }
 
-.jp-volume-bar-value span {
+.jp-volume-bar-value .handle {
 	top: -1px;
 	right: 0;
 	position:absolute; 
 	background: url("images/sprites.png") no-repeat center;
 	width:10px; 
 	height:10px; 
-	display: inline-block;
 	background-position: -180px -120px;
-	content: "";
 }
 
 .jp-progress {
     background-color: #3b3b3b;
-    overflow: hidden;
     position: absolute;
     top: 18px;
     left: 15%;
-}
-
-.jp-play-bar {
-    height: 6px;
 }
 
 .jp-time-holder {

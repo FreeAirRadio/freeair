@@ -166,6 +166,10 @@ div[class*="visible"] {
   margin-right: 1%;
 }
 
+.visible-xl-2 {
+  width:48%;
+}
+
 .hidden-xl {
   display:none !important;
 }
@@ -245,6 +249,12 @@ div[class*="visible"] {
 
   .hidden-xs {
     display:none !important;
+  }
+}
+
+@media only screen and (max-width:535px){
+  .visible-xxs-3-2 {
+    width:64.666%;
   }
 }
 
