@@ -17,127 +17,73 @@ var menu = document.getElementsByTagName("menu");
 }
 
 function myPlayers(){
-$("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-    noVolume: false,
-		keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_1"
-      });
-
-$("#jquery_jplayer_2").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
+  var options = {
+    swfPath: "/js",
+    supplied: "mp3,oga",
+    globalVolume: true,
+    play: function() { 
+      $(this).jPlayer("pauseOthers");
+    },
     wmode: "window",
     globalVolume: true,
     smoothPlayBar: true,
     noVolume: false,
     keyEnabled: true,
-		cssSelectorAncestor: "#jp_container_2"
+  };
+
+  $("#jquery_jplayer_1").jPlayer(options, {
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_1"
+  });
 
-$("#jquery_jplayer_3").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Bi2-Serebro.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-    wmode: "window",
-    globalVolume: true,
-    smoothPlayBar: true,
-    noVolume: false,
-    keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_3"
+  $("#jquery_jplayer_2").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
+    },
+  	cssSelectorAncestor: "#jp_container_2"
+  });
 
-$("#jquery_jplayer_4").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Nickelback-Edge_Of_A_Revolution.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-    wmode: "window",
-    globalVolume: true,
-    smoothPlayBar: true,
-    noVolume: false,
-    keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_4"
+  $("#jquery_jplayer_3").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Bi2-Serebro.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_3"
+  });
 
-
-$("#jquery_jplayer_5").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Bi2-Serebro.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-    wmode: "window",
-    globalVolume: true,
-    smoothPlayBar: true,
-    noVolume: false,
-    keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_5"
+  $("#jquery_jplayer_4").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Nickelback-Edge_Of_A_Revolution.mp3"
       });
+    },
+      cssSelectorAncestor: "#jp_container_4"
+  });
 
-
-$("#jquery_jplayer_6").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-    wmode: "window",
-    globalVolume: true,
-    smoothPlayBar: true,
-    noVolume: false,
-    keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_6"
+  $("#jquery_jplayer_5").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Bi2-Serebro.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_5"
+  });
+
+  $("#jquery_jplayer_6").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
+      });
+    },
+    cssSelectorAncestor: "#jp_container_6"
+  });
 }
 
 function bMore(){
