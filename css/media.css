@@ -138,6 +138,10 @@
 		left:0 !important;
 	}
 
+	.gradient {
+		display:none;
+	}
+
 	.photo-author {
 		width:90%;
 		height:auto;

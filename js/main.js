@@ -31,11 +31,6 @@ function myPlayers(){
     keyEnabled: true,
   };
 
-/*  self.update_timer = function (event) {
-    var status = event.jPlayer.status;
-    $('.jtimer').text($.jPlayer.convertTime(status.duration - status.currentTime));
-  };*/
-
   $("#jquery_jplayer_1").jPlayer(options, {
     ready: function () {
       $(this).jPlayer("setMedia", {
@@ -162,6 +157,11 @@ function moreArrow(){
     $(".arrow-hide").hide();
     $('.b-faces-voting').css({'height':heightUl});
   });
+}
+
+function gradient(){
+  var heightGradient = $('#horiz_container_inner').outerHeight();
+  $('.gradient').css({'height':heightGradient});
 }
 
 function clickly(){
@@ -320,6 +320,8 @@ $(document).ready(function(){
   diagram();
 
   vote();
+
+  gradient();
 });
 
 $(window).resize(function(){
@@ -332,4 +334,6 @@ $(window).resize(function(){
 	clickly();
 
   scrollnews();
+
+  gradient();
 });
