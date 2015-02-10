@@ -31,13 +31,23 @@ function myPlayers(){
     keyEnabled: true,
   };
 
+/*  self.update_timer = function (event) {
+    var status = event.jPlayer.status;
+    $('.jtimer').text($.jPlayer.convertTime(status.duration - status.currentTime));
+  };*/
+
   $("#jquery_jplayer_1").jPlayer(options, {
     ready: function () {
       $(this).jPlayer("setMedia", {
         mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
       });
     },
-    cssSelectorAncestor: "#jp_container_1"
+    cssSelectorAncestor: "#jp_container_1",
+    timeupdate: function(event) {
+      var status = event.jPlayer.status,
+      remaining = status.duration - status.currentTime;
+      $('.jtimer').text($.jPlayer.convertTime(remaining));  
+    }
   });
 
   $("#jquery_jplayer_2").jPlayer(options,{
@@ -46,7 +56,12 @@ function myPlayers(){
         mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
     },
-  	cssSelectorAncestor: "#jp_container_2"
+  	cssSelectorAncestor: "#jp_container_2",
+    timeupdate: function(event) {
+      var status = event.jPlayer.status,
+      remaining = status.duration - status.currentTime;
+      $('.jtimer2').text($.jPlayer.convertTime(remaining));  
+    }
   });
 
   $("#jquery_jplayer_3").jPlayer(options,{
@@ -55,7 +70,12 @@ function myPlayers(){
         mp3: "audio/Bi2-Serebro.mp3"
       });
     },
-    cssSelectorAncestor: "#jp_container_3"
+    cssSelectorAncestor: "#jp_container_3",
+    timeupdate: function(event) {
+      var status = event.jPlayer.status,
+      remaining = status.duration - status.currentTime;
+      $('.jtimer3').text($.jPlayer.convertTime(remaining));  
+    }
   });
 
   $("#jquery_jplayer_4").jPlayer(options,{
@@ -64,7 +84,12 @@ function myPlayers(){
         mp3: "audio/Nickelback-Edge_Of_A_Revolution.mp3"
       });
     },
-      cssSelectorAncestor: "#jp_container_4"
+      cssSelectorAncestor: "#jp_container_4",
+    timeupdate: function(event) {
+      var status = event.jPlayer.status,
+      remaining = status.duration - status.currentTime;
+      $('.jtimer4').text($.jPlayer.convertTime(remaining));  
+    }
   });
 
   $("#jquery_jplayer_5").jPlayer(options,{
@@ -73,7 +98,12 @@ function myPlayers(){
         mp3: "audio/Bi2-Serebro.mp3"
       });
     },
-    cssSelectorAncestor: "#jp_container_5"
+    cssSelectorAncestor: "#jp_container_5",
+    timeupdate: function(event) {
+      var status = event.jPlayer.status,
+      remaining = status.duration - status.currentTime;
+      $('.jtimer5').text($.jPlayer.convertTime(remaining));  
+    }
   });
 
   $("#jquery_jplayer_6").jPlayer(options,{
@@ -82,7 +112,12 @@ function myPlayers(){
         mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
     },
-    cssSelectorAncestor: "#jp_container_6"
+    cssSelectorAncestor: "#jp_container_6",
+    timeupdate: function(event) {
+      var status = event.jPlayer.status,
+      remaining = status.duration - status.currentTime;
+      $('.jtimer6').text($.jPlayer.convertTime(remaining));  
+    }
   });
 }
 

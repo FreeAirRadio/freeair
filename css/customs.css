@@ -244,6 +244,10 @@ menu {
 	content:"";
 }
 
+.top-rating:before {
+	margin: 0;
+}
+
 /*Styles for player*/
 .jp-border {
     border-radius: 20px;
