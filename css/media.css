@@ -134,6 +134,10 @@
 		height:323px;
 	}
 
+	#horiz_container_inner {
+		left:0 !important;
+	}
+
 	.photo-author {
 		width:90%;
 		height:auto;

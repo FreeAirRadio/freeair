@@ -1,6 +1,6 @@
 function stickyHeader(){
   var fixed = document.getElementsByTagName("header");
-    $(fixed).sticky({ topSpacing: 0 });
+  $(fixed).sticky({ topSpacing: 0 });
 }
 
 function menuFooter(){
