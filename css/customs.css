@@ -259,6 +259,23 @@ menu {
     width: auto;
 }
 
+.jp-play-bar {
+	position:relative;
+	z-index: 9999;
+}
+
+.jp-play-bar span {
+	top: -1px;
+	right: 0;
+	position:absolute; 
+	background: url("images/sprites.png") no-repeat center;
+	width:10px; 
+	height:10px; 
+	display: inline-block;
+	background-position: -120px -120px;
+	content: "";
+}
+
 .jp-play:before {
 	background:url("images/sprites.png") no-repeat -9999px -9999px; 
 	width:27px; 
@@ -306,19 +323,33 @@ menu {
 }
 
 .jp-volume-bar {
-	display:inline-block;
-	margin:0 0 -3px 4px;
+	margin: 8px 5px;
+	float:left;
     width: 80px;
     height: 8px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     background-color: #b6cecc;
     overflow: hidden;
+    cursor:pointer;
 }
 
 .jp-volume-bar-value {
     background-color: #618380;
     height: 8px;
-    border-radius: 20px 20px 20px 20px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.jp-volume-bar-value span {
+	top: -1px;
+	right: 0;
+	position:absolute; 
+	background: url("images/sprites.png") no-repeat center;
+	width:10px; 
+	height:10px; 
+	display: inline-block;
+	background-position: -180px -120px;
+	content: "";
 }
 
 .jp-progress {
