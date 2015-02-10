@@ -1,148 +1,89 @@
 function stickyHeader(){
   var fixed = document.getElementsByTagName("header");
-    $(fixed).sticky({ topSpacing: 0 });
+  $(fixed).sticky({ topSpacing: 0 });
 }
 
 function menuFooter(){
 var menu = document.getElementsByTagName("menu");
    if (document.body.clientWidth < 520){
     	$("menu").hide();
-      	$('.b-menu').click(function(){
-			$(this).next().slideToggle("normal");
-		});
+      $('.b-menu').click(function(){
+			 $(this).next().stop().slideToggle("normal");
+		  });
     } else {
       $("menu").show();
+      $('.b-menu').unbind('click');
     }
 }
 
 function myPlayers(){
-$("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_1"
+  var options = {
+    swfPath: "/js",
+    supplied: "mp3,oga",
+    globalVolume: true,
+    play: function() { 
+      $(this).jPlayer("pauseOthers");
+    },
+    wmode: "window",
+    globalVolume: true,
+    smoothPlayBar: true,
+    noVolume: false,
+    keyEnabled: true,
+  };
+
+  $("#jquery_jplayer_1").jPlayer(options, {
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_1"
+  });
 
-$("#jquery_jplayer_2").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-		swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
-		cssSelectorAncestor: "#jp_container_2"
+  $("#jquery_jplayer_2").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
+    },
+  	cssSelectorAncestor: "#jp_container_2"
+  });
 
-$("#jquery_jplayer_3").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Bi2-Serebro.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-		swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_3"
+  $("#jquery_jplayer_3").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Bi2-Serebro.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_3"
+  });
 
-$("#jquery_jplayer_4").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Nickelback-Edge_Of_A_Revolution.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_4"
+  $("#jquery_jplayer_4").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Nickelback-Edge_Of_A_Revolution.mp3"
       });
+    },
+      cssSelectorAncestor: "#jp_container_4"
+  });
 
-
-$("#jquery_jplayer_5").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Bi2-Serebro.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_5"
+  $("#jquery_jplayer_5").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Bi2-Serebro.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_5"
+  });
 
-
-$("#jquery_jplayer_6").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
-          });
-        },
-        swfPath: "/js",
-        supplied: "mp3,oga",
-        globalVolume: true,
-        play: function() { 
-            $(this).jPlayer("pauseOthers");
-        },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
-        cssSelectorAncestor: "#jp_container_6"
+  $("#jquery_jplayer_6").jPlayer(options,{
+    ready: function () {
+      $(this).jPlayer("setMedia", {
+        mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
+    },
+    cssSelectorAncestor: "#jp_container_6"
+  });
 }
 
 function bMore(){
@@ -222,10 +163,13 @@ function diagram(){
     $('#container').highcharts({
         chart: {
             type: 'spline',
-            zoomType: 'x'
+            zoomType: 'x',
+            backgroundColor:'#f58271'
         },
+        colors: ['#fff'],
         title: {
-            text: 'Popularity'
+            text: 'Popularity',
+            align: 'left'
         },
         xAxis: {
             type: 'datetime',
@@ -249,20 +193,23 @@ function diagram(){
                 fillColor: {
                     linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1},
                     stops: [
-                        [0, Highcharts.getOptions().colors[0]],
-                        [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                        [0, '#ffffff'],
+                        [1, 'rgba(255,255,255,.05)']
                     ]
                 },
-                marker: {
-                    radius: 2
-                },
+
                 lineWidth: 0,
-                states: {
-                    hover: {
-                        lineWidth: 1
-                    }
-                },
+
                 threshold: null
+            },
+            series: {
+                marker: {
+                    states: {
+                        hover: {
+                            enabled: false
+                        }
+                    }
+                }
             }
         },
 

@@ -88,19 +88,19 @@ footer {
 	content:"";
 }
 
-.fb:before, a:hover.fb:before {
+.fb:before {
 	background-position:0px 0px;
 }
 
-.tw:before, a:hover.tw:before {
+.tw:before {
 	background-position:-60px 0px;
 }
 
-.go:before, a:hover.go:before {
+.go:before {
 	background-position:-120px 0px;
 }
 
-.yt:before, a:hover.yt:before {
+.yt:before {
 	background-position:-180px 0px;
 }
 
@@ -216,6 +216,10 @@ menu {
 	content:"";
 }
 
+.now {
+	width:33.6%;
+}
+
 .now p:before {
 	background:url("images/sprites.png") no-repeat -9999px -9999px; 
 	width:20px; 
@@ -293,7 +297,6 @@ menu {
 	content: "";
 }
 
-
 .jp-mute {
 	display: inline-block;
 }
@@ -362,7 +365,7 @@ menu {
 	width:15px; 
 	height:14px; 
 	display:inline-block;
-	margin:0 0 -2px 3px;
+	margin:0 0 -2px 9px;
 	background-position: -60px -180px;
 	content:"";
 }
@@ -384,17 +387,8 @@ menu {
 	vertical-align: top;
 }
 
-.dj-a {
+.one {
 	display: block;
-}
-
-.dj-a:hover {
-	background: url(images/faces/01.jpg) no-repeat 0 0;
-	background-size:100%;
-}
-
-.dj-a:hover img  {
-	visibility: hidden;
 }
 
 .dj-a figure {
@@ -419,7 +413,7 @@ menu {
 
 .b-rating {
 	border-radius: 100%;
-	border:5px solid #a9d5cd;
+	border:3px solid #a9d5cd;
 }
 
 .b-title-favorite {
@@ -454,6 +448,14 @@ figure figcaption {
 }
 
 figure:hover figcaption {
+	opacity:1;
+}
+
+.item-level {
+	background-color: rgb(245,130,113);
+	width:22px;
+	height:22px;
+	border-radius:100%;
 	opacity:1;
 }
 
@@ -553,7 +555,7 @@ ul {
 }
 
 .maximum {
-	width:24.5%;
+	width:25%;
 }
 
 #b-news {
@@ -565,13 +567,17 @@ ul {
 }
 
 #horiz_container {
-	width:1650px;
 	margin:0px;
-	height:auto;
+	width:1650px;
+}
+
+.item-news {
+	width:16%;
+	display:inline-block;
 }
 
 #scrollbar { 
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 	padding-top:30px;
     position:relative; 
 }
@@ -597,11 +603,6 @@ ul {
 	margin: -12px 0px 0 3px;
 	background-position: 0px -240px;
 	content:"";
-}  
-
-.item-news {
-	width:16%;
-	display:inline-block;
 }
 
 .b-menu {
@@ -619,4 +620,8 @@ ul {
 #container {
 	height: 150px;
 	margin: 0 auto;
+}
+
+.highcharts-button {
+	display:none;
 }

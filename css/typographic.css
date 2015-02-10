@@ -6,21 +6,45 @@
 @font-face {
     font-family: Regular;
     src: url(../fonts/Exo2.0-ExtraLight.otf);
+    src: url(../fonts/Exo2.0-ExtraLight.eot);
+    src: url(../fonts/Exo2.0-ExtraLight.eot?#iefix)format("embedded-opentype"),
+    url(../fonts/Exo2.0-ExtraLight.woff) format("woff"),
+    url(../fonts/Exo2.0-ExtraLight.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
     font-family: Semibold;
     src: url(../fonts/Exo2.0-Regular.otf);
+    src: url(../fonts/Exo2.0-Regular.eot);
+    src: url(../fonts/Exo2.0-Regular.eot?#iefix)format("embedded-opentype"),
+    url(../fonts/Exo2.0-Regular.woff) format("woff"),
+    url(../fonts/Exo2.0-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
     font-family: Bold;
     src: url(../fonts/Exo2.0-Semibold.otf);
+    src: url(../fonts/Exo2.0-Semibold.eot);
+    src: url(../fonts/Exo2.0-Semibold.eot?#iefix)format("embedded-opentype"),
+    url(../fonts/Exo2.0-Semibold.woff) format("woff"),
+    url(../fonts/Exo2.0-Semibold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 @font-face {
     font-family: Medium;
     src: url(../fonts/Exo2.0-Medium.otf);
+    src: url(../fonts/Exo2.0-Medium.eot);
+    src: url(../fonts/Exo2.0-Medium.eot?#iefix)format("embedded-opentype"),
+    url(../fonts/Exo2.0-Medium.woff) format("woff"),
+    url(../fonts/Exo2.0-Medium.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
 
 h1 {
