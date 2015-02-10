@@ -29,11 +29,10 @@ $("#jquery_jplayer_1").jPlayer({
         play: function() { 
             $(this).jPlayer("pauseOthers");
         },
-        swfPath: "js",
-        supplied: "mp3,oga",
 		wmode: "window",
 		globalVolume: true,
 		smoothPlayBar: true,
+    noVolume: false,
 		keyEnabled: true,
         cssSelectorAncestor: "#jp_container_1"
       });
@@ -50,12 +49,11 @@ $("#jquery_jplayer_2").jPlayer({
         play: function() { 
             $(this).jPlayer("pauseOthers");
         },
-		swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
+    wmode: "window",
+    globalVolume: true,
+    smoothPlayBar: true,
+    noVolume: false,
+    keyEnabled: true,
 		cssSelectorAncestor: "#jp_container_2"
       });
 
@@ -71,12 +69,11 @@ $("#jquery_jplayer_3").jPlayer({
         play: function() { 
             $(this).jPlayer("pauseOthers");
         },
-		swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
+    wmode: "window",
+    globalVolume: true,
+    smoothPlayBar: true,
+    noVolume: false,
+    keyEnabled: true,
         cssSelectorAncestor: "#jp_container_3"
       });
 
@@ -92,12 +89,11 @@ $("#jquery_jplayer_4").jPlayer({
         play: function() { 
             $(this).jPlayer("pauseOthers");
         },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
+    wmode: "window",
+    globalVolume: true,
+    smoothPlayBar: true,
+    noVolume: false,
+    keyEnabled: true,
         cssSelectorAncestor: "#jp_container_4"
       });
 
@@ -114,12 +110,11 @@ $("#jquery_jplayer_5").jPlayer({
         play: function() { 
             $(this).jPlayer("pauseOthers");
         },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
+    wmode: "window",
+    globalVolume: true,
+    smoothPlayBar: true,
+    noVolume: false,
+    keyEnabled: true,
         cssSelectorAncestor: "#jp_container_5"
       });
 
@@ -136,12 +131,11 @@ $("#jquery_jplayer_6").jPlayer({
         play: function() { 
             $(this).jPlayer("pauseOthers");
         },
-        swfPath: "js",
-        supplied: "mp3,oga",
-		wmode: "window",
-		globalVolume: true,
-		smoothPlayBar: true,
-		keyEnabled: true,
+    wmode: "window",
+    globalVolume: true,
+    smoothPlayBar: true,
+    noVolume: false,
+    keyEnabled: true,
         cssSelectorAncestor: "#jp_container_6"
       });
 }
