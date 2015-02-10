@@ -5,7 +5,7 @@ function stickyHeader(){
 
 function menuFooter(){
 var menu = document.getElementsByTagName("menu");
-   if (document.body.clientWidth < 520){
+   if (document.body.clientWidth < 620){
     	$("menu").hide();
       $('.b-menu').click(function(){
 			 $(this).next().stop().slideToggle("normal");
@@ -173,11 +173,13 @@ function diagram(){
         },
         xAxis: {
             type: 'datetime',
+             gridLineWidth:0
         },
         yAxis: {
             title: {
                 text: null
-            }
+            },
+            gridLineWidth:0
         },
 
         labels: {
