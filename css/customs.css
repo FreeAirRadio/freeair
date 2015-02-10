@@ -88,19 +88,19 @@ footer {
 	content:"";
 }
 
-.fb:before, a:hover.fb:before {
+.fb:before {
 	background-position:0px 0px;
 }
 
-.tw:before, a:hover.tw:before {
+.tw:before {
 	background-position:-60px 0px;
 }
 
-.go:before, a:hover.go:before {
+.go:before {
 	background-position:-120px 0px;
 }
 
-.yt:before, a:hover.yt:before {
+.yt:before {
 	background-position:-180px 0px;
 }
 
@@ -387,17 +387,8 @@ menu {
 	vertical-align: top;
 }
 
-.dj-a {
+.one {
 	display: block;
-}
-
-.dj-a:hover img  {
-	visibility: hidden;
-}
-
-.dj-a:hover {
-	background: url(images/faces/01.jpg) no-repeat 0 0;
-	background-size:100%;
 }
 
 .dj-a figure {
@@ -630,4 +621,8 @@ ul {
 #container {
 	height: 150px;
 	margin: 0 auto;
+}
+
+.highcharts-button {
+	display:none;
 }
