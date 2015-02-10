@@ -96,12 +96,12 @@ function bMore(){
   }
   $(".arrow-hide-dj").hide();
   $(".arrow-down-dj").click(function(){
-      $(".b-dj-ul").animate({scrollTop: "+=100"});
+      $(".b-dj-ul").stop().animate({scrollTop:'+=' + 100 + 'px'});
       $(".arrow-hide-dj").show();
       $('.b-dj-ul').css({'height':heightDJbig});
     });
     $(".arrow-top-dj").click(function(){
-      $(".b-dj-ul").animate({scrollTop: "0"});
+      $(".b-dj-ul").stop().animate({scrollTop: "0"});
         $(".arrow-hide-dj").hide();
         $('.b-dj-ul').css({'height':heightDJ});
     });
@@ -118,12 +118,12 @@ function moreArrow(){
   }
   $(".arrow-hide").hide();
   $(".arrow-down").click(function(){
-    $(".b-faces-voting").animate({scrollTop: "+=100"});
+    $(".b-faces-voting").stop().animate({scrollTop:'+=' + 100 + 'px'});
     $(".arrow-hide").show();
     $('.b-faces-voting').css({'height':heightUlbig});
   });
   $(".arrow-top").click(function(){
-    $(".b-faces-voting").animate({scrollTop: "0"});
+    $(".b-faces-voting").stop().animate({scrollTop: "0"});
     $(".arrow-hide").hide();
     $('.b-faces-voting').css({'height':heightUl});
   });
