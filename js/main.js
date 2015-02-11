@@ -171,11 +171,11 @@ function clickly(){
 }
 
 function personVoting(){
-	$(".item-photo-person").hover(function(){
-	     $(this).find("#total").css("background","none");
-	    }, function(){
-	    $("#total").css("background-color"," #f58271");
-  	});
+  $(".item-photo-person").hover(function(){
+       $(this).find(".total").css("background","none");
+      }, function(){
+      $(".total").css("background-color"," #f58271");
+    });
 }
 
 function playList(){
@@ -208,13 +208,16 @@ function diagram(){
         },
         xAxis: {
             type: 'datetime',
-             gridLineWidth:0
+            gridLineWidth:0,
+            lineColor: 'none',
+            tickColor: 'none'
         },
         yAxis: {
             title: {
                 text: null
             },
-            gridLineWidth:0
+            gridLineWidth:0,
+            step: 5000
         },
 
         labels: {
@@ -263,41 +266,6 @@ function diagram(){
 });
 }
 
-function vote(){
-    dojo.addOnLoad(function() {
-    var vote_btn = dojo.byId("vote_btn");
-
-    var total   = 0;
-
-    
-    dojo.connect(vote_btn, "onclick", function() {
-
-      dojo.xhrPost({
-        url: "../php/vote.php",
-        content: {act: 'vote'},
-        form: "total",
-        handleAs: "json",
-        load: function(response, ioArgs) {
-          total = response.total;
-            
-          show_vote_results(total);
-  
-          return response;
-        },
-        error: function(response, ioArgs) {
-          console.error("HTTP status code: ", ioArgs.xhr.status);
-          return response;
-        }
-      });
-    });
-
-  });
-
-  function show_vote_results(total) {
-    dojo.byId("total").innerHTML = total;
-  }
-}
-
 $(document).ready(function(){
   stickyHeader();
 
@@ -318,8 +286,6 @@ $(document).ready(function(){
   scrollnews();
 
   diagram();
-
-  vote();
 
   gradient();
 });
