@@ -38,6 +38,7 @@ html {
 	height:100%;
 	margin: 105px auto 0;
 	color:#fff;
+	position:relative;
 }
 
 /*Style for image*/
@@ -103,7 +104,7 @@ footer {
 	position: absolute;  
 	bottom: 0;  
 	height: 280px; 
-	width: 75%;
+	width: 100%;
 	background-image: url(images/fbg.png);
 	background-position: right bottom;
     background-repeat: no-repeat;
@@ -150,6 +151,10 @@ nav {
 menu {
 	list-style-type: none;
 	margin: 20px 0 10px;
+}
+
+.variant {
+	overflow: hidden;
 }
 
 .h-menu {
