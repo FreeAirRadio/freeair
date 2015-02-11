@@ -15,7 +15,7 @@
     <script type="text/javascript" src="js/jquery.horizontal.scroll.js"></script>   
     <script type="text/javascript" src="js/highcharts.js"></script>
 	<script type="text/javascript" src="js/exporting.js"></script>
-	<script type="text/javascript" src="js/dojo.js" djConfig="parseOnLoad:true, isDebug:false, usePlainJson:true"></script>
+	<script type="text/javascript" src="js/ajax_likes.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head> 
 <body>
@@ -83,7 +83,7 @@
 										<p class="font-dark">Christopher Stewart</p>
 										<p class="font-white semibold">The road to space</p>
 	    							</div>
-	    							<a href="" target="_blank" class="star-rating span_3"> </a>
+	    							<a href="" target="_blank" class="star-rating top-rating span_3"> </a>
 	    							<div class="jp-gui jp-interface span_12">
 	        							<div class="jp-progress jp-border span_12 b-player-progress">
 	          								<div class="jp-seek-bar">
@@ -94,7 +94,7 @@
 	        							</div>
 	        							<div class="jp-time-holder b-time-holder font-white">
 	          								<div class="span_10">
-	          									<small class="jp-current-time span_11"></small>
+	          									<small class="jtimer span_11"></small>
 	          								</div>
 	          								<div class="span_2" role="timer" aria-label="duration" >
 	          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
@@ -424,7 +424,7 @@
 												</div>
 	        									<div class="jp-time-holder">
 			          								<div class="span_10">
-			          									<small class="jp-current-time span_11"></small>
+			          									<small class="jtimer2 span_11"></small>
 			          								</div>
 			          								<div class="span_2">
 			          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
@@ -473,7 +473,7 @@
 												</div>
 	        									<div class="jp-time-holder">
 			          								<div class="span_10">
-			          									<small class="jp-current-time span_11"></small>
+			          									<small class="jtimer3 span_11"></small>
 			          								</div>
 			          								<div class="span_2">
 			          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
@@ -522,7 +522,7 @@
 												</div>
 	        									<div class="jp-time-holder">
 			          								<div class="span_10">
-			          									<small class="jp-current-time span_11"></small>
+			          									<small class="jtimer4 span_11"></small>
 			          								</div>
 			          								<div class="span_2">
 			          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
@@ -571,7 +571,7 @@
 												</div>
 	        									<div class="jp-time-holder">
 			          								<div class="span_10">
-			          									<small class="jp-current-time span_11"></small>
+			          									<small class="jtimer5 span_11"></small>
 			          								</div>
 			          								<div class="span_2">
 			          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
@@ -620,7 +620,7 @@
 												</div>
 	        									<div class="jp-time-holder">
 			          								<div class="span_10">
-			          									<small class="jp-current-time span_11"></small>
+			          									<small class="jtimer6 span_11"></small>
 			          								</div>
 			          								<div class="span_2">
 			          									<small class="jp-duration" role="timer" aria-label="duration"> </small>
@@ -644,179 +644,211 @@
 							</div>
 							<ul class="b-faces-voting">
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo1' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax" id="vote_btn"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form id="total" class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo2' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo3' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo4' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo5' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo6' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo7' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo8' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo8' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo9' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo10' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo11' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo12' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo13' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo14' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 								<li class="item-photo-person maximum">
-									<figure>
+									<figure class="ld-container" tid='demo15' action='js/ajax_likes.php'>
 										<a href="" >
 											<img src="css/images/favorite/1.jpg" />
 										</a>
 										<figcaption>
-											<h3 class="star-rating vote semibold uppercase font-white h-margin-tmax"><br/>vote</h3>
+											<div class="star-rating vote semibold uppercase font-white h-margin-tmax">
+												<h3 class="vote-btn">vote</h3>
+											</div>
 										</figcaption>	
-										<form class="bg-coral" method="post"> </form>
+										<div class="bg-coral"><span class="total"> </span></div>
 									</figure>
 								</li>
 							</ul>
@@ -924,6 +956,7 @@
 							</li>
 						</ul>
 					</div>
+					<div class="gradient"></div>
 					<div id="scrollbar">
 					    <div id="track">
 					        <div id="dragBar"></div>
