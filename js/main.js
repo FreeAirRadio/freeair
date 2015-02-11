@@ -204,20 +204,43 @@ function diagram(){
         colors: ['#fff'],
         title: {
             text: 'Popularity',
-            align: 'left'
+            align: 'left',
+            style: {
+              color: '#c75545'
+            }
         },
         xAxis: {
             type: 'datetime',
             gridLineWidth:0,
             lineColor: 'none',
-            tickColor: 'none'
+            tickColor: 'none',
+            plotLines: [{
+                color: '#c16558',
+                width: 10,
+                value: 0
+            }]
         },
         yAxis: {
             title: {
                 text: null
             },
             gridLineWidth:0,
-            step: 5000
+            step: 5000,
+            tickPositions: [1000, 2000, 3000, 4000, 5000],
+            tickColor: '#a44b3f',
+            tickWidth: 1,
+            tickmarkPlacement: 'on',
+            minorGridLineWidth: 0,
+            minorTickInterval: 200,
+            minorTickColor: '#a44b3f',
+            minorTickWidth: 1,
+            minorTickLength: 5,
+            labels: {
+              style: {
+                fontSize:'8',
+                color:"#fff"
+              }
+            },
         },
 
         labels: {
@@ -233,7 +256,7 @@ function diagram(){
                 fillColor: {
                     linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1},
                     stops: [
-                        [0, '#ffffff'],
+                        [0, 'rgba(255,255,255,.7)'],
                         [1, 'rgba(255,255,255,.05)']
                     ]
                 },
