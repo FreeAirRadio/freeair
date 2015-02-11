@@ -1,24 +1,4 @@
-/*js
-//==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>==>>>
-//
-// Ajax Likes v1.02
-// Copyright (c) phpkobo.com ( http://www.phpkobo.com/ )
-// Email : admin@phpkobo.com
-// ID : AL201-102
-//
-// This software is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// as published by the Free Software Foundation; version 2 of the
-// License.
-//
-// [Product Home Page]
-// http://www.phpkobo.com/ajax_likes.php
-//
-// [Installation Guide]
-// http://www.phpkobo.com/doc.php?d=install&p=AL201-102
-//
-//==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<==<<<
-*/
+
 
 (function($){
 
@@ -127,7 +107,7 @@ var Cookie = new CCookie();
 function CAjaxLikes( domobj )
 {
 	this.domobj = domobj;
-	this.tid = this.getAttr( 'tid', domobj );
+	this.filename = this.getAttr( 'filename', domobj );
 	this.url_server = this.getAttr( 'action', domobj );
 }
 
@@ -150,7 +130,7 @@ CAjaxLikes.prototype =
 	//-----------------------------------------------
 	getCookieName : function()
 	{
-		return 'ajax_likes_' + this.tid;
+		return 'ajax_likes_' + this.filename;
 	},
 
 	//-----------------------------------------------
@@ -176,7 +156,7 @@ CAjaxLikes.prototype =
 	{
 		var _this = this;
 		$.post( this.url_server,
-			{ cmd: "vote", tid:this.tid, vote:v },
+			{ cmd: "vote", filename:this.filename, vote:v },
    			function(data) {
 				var res = eval('(' + data + ')');
 				if ( res.result == 'OK' )

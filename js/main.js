@@ -204,20 +204,29 @@ function diagram(){
         colors: ['#fff'],
         title: {
             text: 'Popularity',
-            align: 'left'
+            align: 'left',
+            style: {
+              color: '#c75545'
+            }
         },
         xAxis: {
             type: 'datetime',
             gridLineWidth:0,
             lineColor: 'none',
-            tickColor: 'none'
+            tickColor: 'none',
         },
         yAxis: {
             title: {
                 text: null
             },
             gridLineWidth:0,
-            step: 5000
+            step: 5000,
+            tickPositions: [1000, 2000, 3000, 4000, 5000],
+            labels: {
+              style: {
+                fontSize:'7'
+              }
+            },
         },
 
         labels: {
