@@ -6,10 +6,10 @@ function stickyHeader(){
 function menuFooter(){
 var menu = document.getElementsByTagName("menu");
    if (document.body.clientWidth < 620){
-    	$("menu").hide();
+      $("menu").hide();
       $('.b-menu').click(function(){
-			 $(this).next().stop().slideToggle("normal");
-		  });
+       $(this).next().stop().slideToggle("normal");
+      });
     } else {
       $("menu").show();
       $('.b-menu').unbind('click');
@@ -51,7 +51,7 @@ function myPlayers(){
         mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
     },
-  	cssSelectorAncestor: "#jp_container_2",
+    cssSelectorAncestor: "#jp_container_2",
     timeupdate: function(event) {
       var status = event.jPlayer.status,
       remaining = status.duration - status.currentTime;
@@ -117,11 +117,11 @@ function myPlayers(){
 }
 
 function bMore(){
-  var heightBanner = $('.item-banner').outerHeight();
+  var heightBanner = $('.item-banner').height();
   var heightFont = $('.item-height').height();
   var heightMore = $('.b-more').height();
-  var heightDJ = heightBanner - heightFont - heightMore;
-  var heightDJbig = heightBanner - heightFont - heightMore - heightMore;
+  var heightDJ = $('.item-banner').height() - heightFont - heightMore;
+  var heightDJbig = $('.item-banner').height() - heightFont - heightMore - heightMore;
   if (document.body.clientWidth > 602){
     $('.b-dj-ul').css({'height':heightDJ});
   }
@@ -167,9 +167,9 @@ function gradient(){
 }
 
 function clickly(){
-	var heightTrack = $('.item-track').outerHeight();
-	var heightBTrack = heightTrack + heightTrack + heightTrack - 1;
-		$('#vertical-ticker').css({'height':heightBTrack});
+  var heightTrack = $('.item-track').outerHeight();
+  var heightBTrack = heightTrack + heightTrack + heightTrack - 1;
+    $('#vertical-ticker').css({'height':heightBTrack});
 }
 
 function personVoting(){
@@ -315,14 +315,18 @@ $(document).ready(function(){
   gradient();
 });
 
+$(window).load(function() {
+  bMore();
+});
+
 $(window).resize(function(){
   bMore();
 
   moreArrow();
 
-	menuFooter();
+  menuFooter();
 
-	clickly();
+  clickly();
 
   scrollnews();
 
