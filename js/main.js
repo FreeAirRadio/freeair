@@ -34,7 +34,7 @@ function myPlayers(){
   $("#jquery_jplayer_1").jPlayer(options, {
     ready: function () {
       $(this).jPlayer("setMedia", {
-        mp3: "audio/Rammstein–Du_riechst_so_gut.mp3"
+        mp3: "audio/Rammstein-Du_riechst_so_gut.mp3"
       });
     },
     cssSelectorAncestor: "#jp_container_1",
@@ -117,11 +117,12 @@ function myPlayers(){
 }
 
 function bMore(){
-  if (document.body.clientWidth > 603){
-    var heightFont = $('.item-height').height();
-    var heightMore = $('.b-more').height();
-    var heightDJ = $('.item-banner').height() - heightFont - heightMore;
-    var heightDJbig = $('.item-banner').height() - heightFont - heightMore - heightMore;
+  var heightBanner = $('.item-banner').outerHeight();
+  var heightFont = $('.item-height').height();
+  var heightMore = $('.b-more').height();
+  var heightDJ = heightBanner - heightFont - heightMore;
+  var heightDJbig = heightBanner - heightFont - heightMore - heightMore;
+  if (document.body.clientWidth > 602){
     $('.b-dj-ul').css({'height':heightDJ});
   }
   $(".arrow-hide-dj").hide();
@@ -138,12 +139,12 @@ function bMore(){
 }
 
 function moreArrow(){
+  var heightPlus = $('.item-block-right').outerHeight();
+  var heightFavorite = $('.b-title-favorite').outerHeight();
+  var heightMoreA = $('.b-more').height();
+  var heightUl = $('.item-block-left').height() - heightFavorite - heightMoreA - heightPlus;
+  var heightUlbig = $('.item-block-left').height() - heightFavorite - heightMoreA - heightMoreA - heightPlus;
   if (document.body.clientWidth > 603){
-    var heightPlus = $('.item-block-right').outerHeight();
-    var heightFavorite = $('.b-title-favorite').outerHeight();
-    var heightMoreA = $('.b-more').height();
-    var heightUl = $('.item-block-left').height() - heightFavorite - heightMoreA - heightPlus;
-    var heightUlbig = $('.item-block-left').height() - heightFavorite - heightMoreA - heightMoreA - heightPlus;
     $('.b-faces-voting').css({'height':heightUl});
   }
   $(".arrow-hide").hide();
@@ -161,7 +162,8 @@ function moreArrow(){
 
 function gradient(){
   var heightGradient = $('#horiz_container_inner').outerHeight();
-  $('.gradient').css({'height':heightGradient});
+  $('.gradient-left').css({'height':heightGradient});
+  $('.gradient-right').css({'height':heightGradient});
 }
 
 function clickly(){

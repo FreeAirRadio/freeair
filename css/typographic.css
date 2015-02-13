@@ -72,6 +72,9 @@ p {
 small {
   font: 0.7em/0.9em 'Exo2';
 }
+.thin {
+  font-weight: 100;
+}
 .light {
   font-weight: 200;
 }
