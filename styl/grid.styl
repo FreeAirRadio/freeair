@@ -1,0 +1,147 @@
+html 
+	box-sizing border-box
+
+*
+*:before
+*:after 
+	box-sizing inherit
+
+body
+	min-width 320px
+
+div[class*="grid"]
+	float fleft
+	margin marpad
+
+numbers = 1..12
+margpad = 2
+columns = (100 / length(numbers)) - margpad
+for a in numbers
+	.grid_{a}
+		width ((columns * a) + ((a - 1) * margpad))%
+
+div[class*="span"]
+	float fleft
+
+num = 1..12
+columns = (100 / length(num))
+for b in num
+	.span_{b}
+		width (columns * b)%
+
+div[class*="inner"]
+	float fleft
+	padding marpad
+
+nums = 1..12
+columns = (100 / length(nums))
+for c in num
+	.inner_{c}
+		width (columns * c)%
+
+div[class*="modul"] 
+	float fleft
+	padding 0 10px
+	width 100%
+
+div[class*="columns"] 
+	float fleft
+	padding 0 10px
+	width 50%
+
+div[class*="push"] 
+	position prelative
+
+pushs = 1..12
+columns = (100 / length(pushs))
+for q in pushs
+	.push_{q}
+		left (columns * q)%
+
+prefix = 1..12
+columns = (100 / length(prefix))
+for c in pushs
+	.prefix_{c}
+		padding-left (columns * c)%
+
+.clear 
+	clear both
+	display block
+	overflow hidden
+	visibility hidden
+
+div[class*="visible"] 
+	float fleft
+	margin 0 1%
+
+.visible-xl-2 
+	width 48%
+
+.hidden-xl 
+	display none !important
+
+@media only screen and (max-width: 1200px)
+	.visible-lg-3
+		width 31.333%
+
+	.hidden-lg 
+		display none !important
+
+@media only screen and (max-width: 960px)
+	.visible-md-1
+		width 98%
+
+	.visible-md-2
+		width 48%
+
+
+	.visible-md-3 
+		width 31.333%
+
+	.hidden-md
+		display none !important
+
+	.hidden-prefix
+		padding-left 0
+
+	.hidden-push
+		left 0
+
+@media only screen and (max-width: 768px)
+	.visible-sm-3
+		width 31.333%
+
+	.visible-sm-3-1
+		width 98%
+
+	.visible-sm-3-2
+		width 64.666%
+
+	.hidden-sm 
+		display none !important
+
+@media only screen and (max-width: 620px)
+	.visible-xs-3-1 
+		width 31.333%
+
+	.visible-xs-3-2
+		width 64.666%
+
+	.visible-xs-1
+		width 98%
+
+	div[class*="mini"]
+		width 100%
+		float fleft
+		margin 0
+
+	.hidden-xs
+		display none !important
+
+@media only screen and (max-width: 535px)
+	.visible-xxs-3-2
+		width:64.666%
+
+@media only screen and (max-width: 435px)
+	.visible-xxs-1 
+		width 98%
