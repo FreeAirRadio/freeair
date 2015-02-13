@@ -1,135 +1,110 @@
 @font-face {
-    font-family: Light;
-    src: url(../fonts/Exo2.0-Thin.otf);
+  font-family: 'Exo2';
+  src: url("../fonts/Exo2.0-Thin.otf");
+  src: url("../fonts/Exo2.0-Thin.eot");
+  src: url("../fonts/Exo2.0-Thin.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2.0-Thin.woff") format("woff");
+  src: url("../fonts/Exo2.0-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
 }
-
 @font-face {
-    font-family: Regular;
-    src: url(../fonts/Exo2.0-ExtraLight.otf);
-    src: url(../fonts/Exo2.0-ExtraLight.eot);
-    src: url(../fonts/Exo2.0-ExtraLight.eot?#iefix)format("embedded-opentype"),
-    url(../fonts/Exo2.0-ExtraLight.woff) format("woff"),
-    url(../fonts/Exo2.0-ExtraLight.ttf) format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Exo2';
+  src: url("../fonts/Exo2.0-ExtraLight.otf");
+  src: url("../fonts/Exo2.0-ExtraLight.eot");
+  src: url("../fonts/Exo2.0-ExtraLight.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2.0-ExtraLight.woff") format("woff");
+  src: url("../fonts/Exo2.0-ExtraLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200;
 }
-
 @font-face {
-    font-family: Semibold;
-    src: url(../fonts/Exo2.0-Regular.otf);
-    src: url(../fonts/Exo2.0-Regular.eot);
-    src: url(../fonts/Exo2.0-Regular.eot?#iefix)format("embedded-opentype"),
-    url(../fonts/Exo2.0-Regular.woff) format("woff"),
-    url(../fonts/Exo2.0-Regular.ttf) format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Exo2';
+  src: url("../fonts/Exo2.0-Regular.otf");
+  src: url("../fonts/Exo2.0-Regular.eot");
+  src: url("../fonts/Exo2.0-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2.0-Regular.woff") format("woff");
+  src: url("../fonts/Exo2.0-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
 }
-
 @font-face {
-    font-family: Bold;
-    src: url(../fonts/Exo2.0-Semibold.otf);
-    src: url(../fonts/Exo2.0-Semibold.eot);
-    src: url(../fonts/Exo2.0-Semibold.eot?#iefix)format("embedded-opentype"),
-    url(../fonts/Exo2.0-Semibold.woff) format("woff"),
-    url(../fonts/Exo2.0-Semibold.ttf) format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Exo2';
+  src: url("../fonts/Exo2.0-Medium.otf");
+  src: url("../fonts/Exo2.0-Medium.eot");
+  src: url("../fonts/Exo2.0-Medium.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2.0-Medium.woff") format("woff");
+  src: url("../fonts/Exo2.0-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
 }
-
 @font-face {
-    font-family: Medium;
-    src: url(../fonts/Exo2.0-Medium.otf);
-    src: url(../fonts/Exo2.0-Medium.eot);
-    src: url(../fonts/Exo2.0-Medium.eot?#iefix)format("embedded-opentype"),
-    url(../fonts/Exo2.0-Medium.woff) format("woff"),
-    url(../fonts/Exo2.0-Medium.ttf) format("truetype");
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Exo2';
+  src: url("../fonts/Exo2.0-Semibold.otf");
+  src: url("../fonts/Exo2.0-Semibold.eot");
+  src: url("../fonts/Exo2.0-Semibold.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Exo2.0-Semibold.woff") format("woff");
+  src: url("../fonts/Exo2.0-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
 }
-
 h1 {
-	font-size:2.8em;
-	line-height:1.2em;
+  font: 2.8em/1.2em 'Exo2';
 }
-
 h2 {
-	font-size:1.2em;
+  font: 1.2em 'Exo2';
 }
-
 h3 {
-	font-size:1em;
-	line-height:18px;
+  font: 1em/0.9em 'Exo2';
 }
-
 h4 {
-	font-size:0.9em;
-	line-height:18px;
+  font: 0.9em/0.9em 'Exo2';
 }
-
 h5 {
-	font-size:0.9em;
-	line-height:14px;
+  font: 0.9em/1em 'Exo2';
 }
-
 h6 {
-	font-size:0.8em;
-	line-height:14px;
+  font: 0.8em/0.9em 'Exo2';
 }
-
 p {
-	font-size:0.8em;
-	line-height:18px;
+  font: 0.8em/1.2em 'Exo2';
 }
-
 small {
-	font-size:0.7em;
-	line-height:14px;
+  font: 0.7em/0.9em 'Exo2';
 }
-
 .light {
-	font-family: Light;
+  font-weight: 200;
 }
-
 .regular {
-    font-family: Regular;
+  font-weight: 400;
 }
-
 .semibold {
-    font-family: Semibold;
+  font-weight: 500;
 }
-
 .bold {
-    font-family: Bold;
+  font-weight: 600;
 }
-
 .font-gray {
-	color:#3a3a3a;
+  color: #3a3a3a;
 }
-
 .font-white {
-	color:#fff;
+  color: #fff;
 }
-
 .font-coral {
-	color:#f58271;
+  color: #f58271;
 }
-
 .font-salmon {
-	color:#c75545;
+  color: #c75545;
 }
-
 .font-dark {
-	color:#575757;
+  color: #575757;
 }
-
 .font-taupe {
-	color:#363636;
+  color: #363636;
 }
-
 .font-black {
-	color:#000;
+  color: #000;
 }
-
 .uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }

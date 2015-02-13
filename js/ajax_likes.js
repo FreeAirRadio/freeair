@@ -20,7 +20,7 @@ function showTip( obj, txt, bgcolor )
 		s += "style='";
 		s += "text-align:center;";
 		s += "padding:10px;";
-		s += "margin:10px 0;";
+		s += "margin:110px 0;";
 		s += "font-size:12px;";
 		s += "font-family:Regular;";
 		s += "color:#ffffff;";
