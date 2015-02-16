@@ -4,11 +4,15 @@ function stickyHeader(){
 }
 
 function menuFooter(){
+
 var menu = document.getElementsByTagName("menu");
    if (document.body.clientWidth < 620){
     	$("menu").hide();
       $('.b-menu').click(function(){
-			 $(this).next().stop().slideToggle("normal");
+        $('.b-menu').each(function() {
+          $(this).next(':visible').stop().slideToggle("normal");
+        });
+        $(this).next().stop().slideToggle("normal");
 		  });
     } else {
       $("menu").show();
@@ -216,6 +220,9 @@ function diagram(){
             gridLineWidth:0,
             lineColor: 'none',
             tickColor: 'none',
+            labels: {
+                enabled: false
+            },
             plotLines: [{
                 color: '#c16558',
                 width: 10,
