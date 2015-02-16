@@ -934,6 +934,7 @@ menu {
   display: inline-block;
   margin: 0 0 -2px 9px;
   background-position: -60px -180px;
+  cursor:pointer;
   content: "";
 }
 .item-banner {
