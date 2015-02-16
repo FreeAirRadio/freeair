@@ -199,6 +199,24 @@ function scrollnews(){
   }
 }
 
+function hoverImg(){
+    $('.dj-a').each(function(){
+    var img = $(this).find('img'),
+        src = img.data('src'),
+        srcHover = img.data('src-hover');
+
+    img.attr('src', src);
+
+    $(this).hover(function(){
+      img.attr('src', srcHover);
+    },
+    function() {
+      img.attr('src', src);
+    });
+
+  });
+}
+
 function diagram(){
   $(function () {
     $('#container').highcharts({
@@ -320,6 +338,9 @@ $(document).ready(function(){
   diagram();
 
   gradient();
+
+  hoverImg();
+
 });
 
 $(window).load(function() {
