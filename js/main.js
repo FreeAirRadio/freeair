@@ -4,12 +4,16 @@ function stickyHeader(){
 }
 
 function menuFooter(){
+
 var menu = document.getElementsByTagName("menu");
    if (document.body.clientWidth < 620){
-      $("menu").hide();
+    	$("menu").hide();
       $('.b-menu').click(function(){
-       $(this).next().stop().slideToggle("normal");
-      });
+        $('.b-menu').each(function() {
+          $(this).next(':visible').stop().slideToggle("normal");
+        });
+        $(this).next().stop().slideToggle("normal");
+		  });
     } else {
       $("menu").show();
       $('.b-menu').unbind('click');
@@ -51,7 +55,7 @@ function myPlayers(){
         mp3: "audio/Kitniss-Derevo_Viselnika.mp3"
       });
     },
-    cssSelectorAncestor: "#jp_container_2",
+  	cssSelectorAncestor: "#jp_container_2",
     timeupdate: function(event) {
       var status = event.jPlayer.status,
       remaining = status.duration - status.currentTime;
@@ -167,9 +171,9 @@ function gradient(){
 }
 
 function clickly(){
-  var heightTrack = $('.item-track').outerHeight();
-  var heightBTrack = heightTrack + heightTrack + heightTrack - 1;
-    $('#vertical-ticker').css({'height':heightBTrack});
+	var heightTrack = $('.item-track').outerHeight();
+	var heightBTrack = heightTrack + heightTrack + heightTrack - 1;
+		$('#vertical-ticker').css({'height':heightBTrack});
 }
 
 function personVoting(){
@@ -216,6 +220,9 @@ function diagram(){
             gridLineWidth:0,
             lineColor: 'none',
             tickColor: 'none',
+            labels: {
+                enabled: false
+            },
             plotLines: [{
                 color: '#c16558',
                 width: 10,
@@ -324,9 +331,9 @@ $(window).resize(function(){
 
   moreArrow();
 
-  menuFooter();
+	menuFooter();
 
-  clickly();
+	clickly();
 
   scrollnews();
 
